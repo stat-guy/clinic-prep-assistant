@@ -129,3 +129,42 @@ export async function getLatestBriefing(appointmentId: string): Promise<Briefing
     briefingMarkdown: data.briefing_md ?? "",
   } as Briefing;
 }
+
+// One-round-trip cached read: patient -> appointments -> latest complete briefing.
+// Avoids the heavy getBundle on the hot (cached) path for speed + tunnel resilience.
+export async function getCachedBriefingByMrn(
+  mrn: string,
+): Promise<{ briefing: Briefing; patient: { name: string; age: number; sex: string } } | null> {
+  const sb = getSupabase();
+  const { data, error } = await sb
+    .from("patients")
+    .select(
+      "first_name, last_name, date_of_birth, sex, appointments(briefings(summary, follow_ups, flags, trends, briefing_md, status, created_at))",
+    )
+    .eq("mrn", mrn)
+    .single();
+  if (error || !data) return null;
+  let latest: any = null;
+  for (const a of (data as any).appointments ?? []) {
+    for (const b of a.briefings ?? []) {
+      if (b.status === "complete" && b.summary && (!latest || b.created_at > latest.created_at)) {
+        latest = b;
+      }
+    }
+  }
+  if (!latest) return null;
+  return {
+    briefing: {
+      summary: latest.summary,
+      followUpQuestions: latest.follow_ups ?? [],
+      flags: latest.flags ?? [],
+      trends: latest.trends ?? [],
+      briefingMarkdown: latest.briefing_md ?? "",
+    } as Briefing,
+    patient: {
+      name: `${data.first_name} ${data.last_name}`.trim(),
+      age: ageFromDob(data.date_of_birth),
+      sex: data.sex ?? "",
+    },
+  };
+}

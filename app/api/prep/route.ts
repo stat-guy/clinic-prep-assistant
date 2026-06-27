@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getBundle, saveBriefing, getLatestBriefing } from "@/lib/db";
+import { getBundle, saveBriefing, getCachedBriefingByMrn } from "@/lib/db";
 import { generatePrepBriefing } from "@/lib/prep";
 import type { PatientBundle } from "@/lib/types";
 
@@ -12,17 +12,15 @@ export async function POST(req: Request) {
     const body = await req.json().catch(() => ({}));
 
     if (body.patientId) {
+      // Hot path: single-round-trip cached read (skips the heavy bundle fetch).
+      // Keeps the deployed demo instant + resilient to tunnel/cold-start latency.
+      if (!body.fresh) {
+        const cached = await getCachedBriefingByMrn(body.patientId);
+        if (cached) return NextResponse.json({ ...cached, cached: true });
+      }
+
       const found = await getBundle(body.patientId);
       if (!found) return NextResponse.json({ error: "patient not found" }, { status: 404 });
-
-      const patient = { name: found.bundle.name, age: found.bundle.age, sex: found.bundle.sex };
-
-      // Cache-first: serve a previously generated briefing instantly. Keeps the
-      // deployed demo snappy and within serverless time limits. {fresh:true} regenerates.
-      if (!body.fresh && found.appointmentId) {
-        const cached = await getLatestBriefing(found.appointmentId);
-        if (cached) return NextResponse.json({ briefing: cached, patient, cached: true });
-      }
 
       const briefing = await generatePrepBriefing(found.bundle, { model });
       await saveBriefing({
@@ -31,7 +29,10 @@ export async function POST(req: Request) {
         briefing,
         model,
       });
-      return NextResponse.json({ briefing, patient });
+      return NextResponse.json({
+        briefing,
+        patient: { name: found.bundle.name, age: found.bundle.age, sex: found.bundle.sex },
+      });
     }
 
     if (body.notes) {
