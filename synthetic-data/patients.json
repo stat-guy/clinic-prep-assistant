@@ -1,0 +1,1045 @@
+[
+  {
+    "id": "rosa-delgado-t2dm-htn",
+    "name": "Rosa Delgado",
+    "age": 58,
+    "sex": "Female",
+    "clinicalTheme": "Chronic disease management — type 2 diabetes and hypertension with a medication-titration decision (rising A1c on maximal metformin, persistently elevated home BP, new microalbuminuria)",
+    "demonstrates": "Tests whether the assistant reads trending labs and vitals across visits rather than restating the latest values: A1c rising 7.1% → 7.9% → 8.4% despite maximal metformin (monotherapy failure), home BP persistently ~148/92 on two agents (above the <130/80 diabetes target), and new microalbuminuria (UACR 62 mg/g) with eGFR 68. A strong assistant surfaces a structured, guideline-aligned next step — add a second glucose-lowering agent, with an SGLT2 inhibitor preferred for cardio-renal protection given the albuminuria (GLP-1 RA as the weight-favorable alternative), plus intensification of antihypertensive therapy — and presents the supporting trend lines, while first asking the non-obvious adherence/technique questions that change whether escalation is appropriate.",
+    "problemList": [
+      "Type 2 diabetes mellitus, uncontrolled (A1c 8.4%) — diagnosed ~2019",
+      "Diabetic kidney disease, early — microalbuminuria (UACR 62 mg/g, A2), eGFR 68",
+      "Essential hypertension, uncontrolled",
+      "Hyperlipidemia",
+      "Obesity (BMI 31.2)"
+    ],
+    "medications": [
+      "Metformin 1000 mg PO BID (maximal dose; uptitrated Jul 2025)",
+      "Lisinopril 20 mg PO daily (uptitrated from 10 mg Jul 2025)",
+      "Hydrochlorothiazide 12.5 mg PO daily (added Nov 2025)",
+      "Atorvastatin 40 mg PO daily (uptitrated from 20 mg Jan 2026)"
+    ],
+    "allergies": [
+      "Sulfonamides (sulfa) — hives, remote/per patient report (note: currently tolerates HCTZ, a sulfonamide diuretic)"
+    ],
+    "labs": [
+      {
+        "name": "HbA1c",
+        "value": "7.1%",
+        "date": "2025-07-15",
+        "flag": "Above goal (<7%)"
+      },
+      {
+        "name": "HbA1c",
+        "value": "7.9%",
+        "date": "2026-01-09",
+        "flag": "High"
+      },
+      {
+        "name": "HbA1c",
+        "value": "8.4%",
+        "date": "2026-06-22",
+        "flag": "High — rising despite max metformin"
+      },
+      {
+        "name": "Fasting glucose",
+        "value": "168 mg/dL",
+        "date": "2026-06-22",
+        "flag": "High"
+      },
+      {
+        "name": "Urine albumin/creatinine ratio (UACR)",
+        "value": "62 mg/g",
+        "date": "2026-04-10",
+        "flag": "High (A2 — new microalbuminuria)"
+      },
+      {
+        "name": "eGFR",
+        "value": "68 mL/min/1.73m2",
+        "date": "2026-06-22",
+        "flag": "Mildly reduced (G2)"
+      },
+      {
+        "name": "Creatinine",
+        "value": "1.0 mg/dL",
+        "date": "2026-06-22",
+        "flag": "Normal"
+      },
+      {
+        "name": "Potassium",
+        "value": "4.2 mmol/L",
+        "date": "2026-06-22",
+        "flag": "Normal"
+      },
+      {
+        "name": "LDL cholesterol",
+        "value": "118 mg/dL",
+        "date": "2026-01-09",
+        "flag": "Above goal (<70 for diabetes)"
+      },
+      {
+        "name": "HDL cholesterol",
+        "value": "41 mg/dL",
+        "date": "2026-01-09",
+        "flag": "Low"
+      },
+      {
+        "name": "Triglycerides",
+        "value": "186 mg/dL",
+        "date": "2026-01-09",
+        "flag": "High"
+      },
+      {
+        "name": "ALT",
+        "value": "27 U/L",
+        "date": "2026-06-22",
+        "flag": "Normal"
+      }
+    ],
+    "priorNotes": [
+      {
+        "date": "2025-07-15",
+        "type": "Office Visit",
+        "author": "I. Quine, MD (PCP) — Cedar Hollow Family Medicine",
+        "text": "58F here for annual DM/HTN f/u. T2DM dx ~2019. c/o nothing new today. denies polyuria/polydipsia, no blurry vision, no CP/sob. feet - no numbness/tingling per pt. Home BP running 140s/90s, didn't bring log. takes meds 'most days.' Diet - admits more tortillas/rice lately, grandkids staying w/ her.\nVitals: BP 146/90 R arm, rpt 144/88. HR 78, wt 188 lb (BMI 31.2).\nA1c today 7.1 (was 6.8 last yr). BMP wnl, Cr 0.9.\nA/P:\n- T2DM: A1c 7.1, uptrending. cont metformin, increased to 1000 mg BID (was 1000 qAM/500 qHS). reinforced diet, nutrition referral placed. monofilament intact.\n- HTN: not at goal. lisinopril 10->20 daily. get a home cuff, bring log next visit.\n- HLD: cont atorva 20, lipids due.\nf/u 3-4 mo w/ A1c. retinal exam ordered."
+      },
+      {
+        "date": "2025-11-20",
+        "type": "Telephone/Portal Encounter",
+        "author": "M. Pell, RN",
+        "text": "Pt msg via portal + phone, concerned home BP 'numbers high.' 2-wk log reviewed: AM 150/94, 148/90, 152/96, 149/92; PM mostly 142-146/86-90. avg ~149/92. States adherent to lisinopril 20 daily, no dizziness, no HA, denies CP/sob. d/w Dr. Quine -> start HCTZ 12.5 mg daily, continue home log, recheck BP 4-6 wks. Pt verbalized understanding, will pick up rx today. - MP, RN"
+      },
+      {
+        "date": "2026-01-09",
+        "type": "Office Visit",
+        "author": "O. Brindlemark, DO (covering for Dr. Quine)",
+        "text": "Seeing for DM/HTN f/u, Dr. Quine out. 58yo F. Says she's 'trying' - walking a little, watching carbs. metformin 1000 BID, occasional loose stool but tolerating. HCTZ started Nov, taking it. Home BP log avg 148/92, AM worse. no edema, no exertional sob, denies CP.\nWt 191 (up 3 lb). office BP 150/94 -> rpt 148/92. HR 80.\nA1c today 7.9 - up from 7.1 in summer. Lipids: LDL 118, TG 186, HDL 41.\npt frustrated - 'I'm doing everything.' reviewed adherence (states good), reinforced diet/activity.\nA/P:\n- T2DM uncontrolled, A1c climbing on max metformin. d/w pt that if not better next visit will likely add a 2nd agent. cont metformin.\n- HTN still above goal on 2 agents. recheck home log, continue current. ordered urine microalbumin.\n- HLD: atorva 20 -> 40.\nf/u 3 mo, repeat A1c + labs."
+      },
+      {
+        "date": "2026-04-10",
+        "type": "Lab Review / Portal Note",
+        "author": "I. Quine, MD (PCP)",
+        "text": "Lab review. Urine microalbumin back -> UACR 62 mg/g, elevated (A2). eGFR 68, Cr 1.0, K 4.2. LDL still 118 from Jan. Pt overdue for repeat A1c (last 7.9). Home BP still running ~148/92 per recent logs. Will address DM control + BP regimen together at next visit. Pt messaged to schedule 3-mo f/u and fasting labs (A1c, BMP, lipids, repeat UACR). - IQ, MD"
+      }
+    ],
+    "upcomingVisitReason": "3-month follow-up for type 2 diabetes and hypertension. Review home BP logs (averaging 148/92) and the most recent A1c (8.4%, up from 7.9% and 7.1%), discuss intensifying therapy. Fasting labs drawn 2026-06-22 prior to visit.",
+    "goldBriefing": {
+      "oneLiner": "58F with type 2 diabetes and hypertension back for a 3-month follow-up: A1c has climbed 7.1% → 7.9% → 8.4% over ~11 months on MAXIMAL metformin, and home BP averages 148/92 on two agents — now with new microalbuminuria (UACR 62 mg/g), pointing toward an SGLT2-inhibitor-led intensification plus tighter BP control rather than another metformin dose change.",
+      "keyHistory": [
+        "T2DM diagnosed ~2019; on metformin 1000 mg BID — already the maximal dose since Jul 2025.",
+        "A1c trend: 7.1% (Jul 2025) → 7.9% (Jan 2026) → 8.4% (Jun 2026) — steadily rising despite max metformin.",
+        "HTN on lisinopril 20 mg + HCTZ 12.5 mg (added Nov 2025); home logs avg 148/92, office 148–150/92–94 — above the <130/80 diabetes target at every check.",
+        "NEW microalbuminuria: UACR 62 mg/g (Apr 2026, A2 category) with eGFR 68, Cr 1.0, K 4.2 — early diabetic kidney disease.",
+        "HLD: LDL 118 on atorvastatin 40 mg (uptitrated from 20 in Jan 2026), TG 186, HDL 41 — LDL above the <70 goal for diabetes.",
+        "Weight up 188 → 191 lb, BMI ~31.2 (obese). Patient reports adherence and is frustrated — 'I'm doing everything.'",
+        "Allergy listed as sulfa (hives, remote) — yet she currently tolerates HCTZ, a sulfonamide."
+      ],
+      "followUpQuestions": [
+        {
+          "question": "How consistently is she actually taking metformin and her BP meds — any missed doses, GI side effects causing skips, or refill gaps in the pharmacy record?",
+          "why": "Distinguishes true pharmacologic failure (which warrants adding a second agent) from nonadherence; this single answer changes the whole plan and avoids escalating on a false 'failure.'",
+          "priority": "high"
+        },
+        {
+          "question": "Any recurrent genital yeast or urinary infections, prior DKA, or reasons for volume concern?",
+          "why": "Screens for SGLT2-inhibitor cautions/contraindications before selecting it as the preferred second agent given her albuminuria and eGFR 68.",
+          "priority": "high"
+        },
+        {
+          "question": "Confirm home BP technique — validated cuff, correct arm/position, seated and rested, AM/PM timing — and review the full log.",
+          "why": "Validates the 148/92 average before committing to a third antihypertensive; rules out measurement artifact or white-coat effect.",
+          "priority": "medium"
+        },
+        {
+          "question": "What are her preferences and insurance coverage for an oral SGLT2 inhibitor vs an injectable GLP-1 receptor agonist?",
+          "why": "Both are guideline-appropriate add-ons; route, cost, and coverage drive adherence. SGLT2i is favored here for kidney protection, while a GLP-1 RA would add meaningful weight benefit (BMI 31).",
+          "priority": "medium"
+        },
+        {
+          "question": "When were her last dilated eye exam and comprehensive foot exam, and any new vision changes, foot numbness, leg edema, or chest pain?",
+          "why": "Rising A1c plus new albuminuria raise concern for other microvascular and macrovascular complications; close any overdue screening gaps.",
+          "priority": "medium"
+        },
+        {
+          "question": "Has the sulfa 'hives' reaction ever recurred? Note she already tolerates HCTZ (a sulfonamide).",
+          "why": "Reconciles a possibly overstated allergy that could needlessly restrict future options, and documents demonstrated tolerance.",
+          "priority": "low"
+        }
+      ],
+      "flags": [
+        "A1c rising 7.1% → 7.9% → 8.4% on MAXIMAL metformin (1000 mg BID): metformin monotherapy has failed — the guideline-aligned next step is to add a second glucose-lowering agent, not to re-tweak metformin.",
+        "NON-OBVIOUS: UACR 62 mg/g + eGFR 68 = early diabetic kidney disease (A2). This makes an SGLT2 inhibitor the preferred add-on for cardio-renal protection — a reason independent of glucose — with a GLP-1 RA as the weight-favorable alternative (BMI 31). The albuminuria is easy to miss buried in the April lab note.",
+        "Home BP averaging 148/92 (and office 148–150/90s) despite lisinopril 20 + HCTZ 12.5 — uncontrolled against the <130/80 diabetes target; needs intensification (e.g., add a CCB such as amlodipine), after confirming adherence and measurement technique.",
+        "LDL 118 on atorvastatin 40 mg — above the <70 goal for diabetes; lipid therapy not yet optimized.",
+        "Documentation discrepancy: sulfa allergy (hives) on the chart, but the patient tolerates HCTZ, a sulfonamide — reconcile before it limits future choices.",
+        "Care-gap check: confirm dilated retinal exam and foot exam are up to date given progressing microvascular disease."
+      ],
+      "briefingMarkdown": "# Rosa Delgado — 58F | T2DM + HTN | 3-month follow-up (prep)\n\n**One-liner:** A1c rising on MAXIMAL metformin (7.1% → 7.9% → 8.4% over ~11 mo); home BP averaging 148/92 on two agents; NEW microalbuminuria (UACR 62). This is a 'second-agent + intensify BP' visit, not a metformin-dose tweak.\n\n## Trends that matter (not just the latest value)\n| Date | A1c | BP |\n|---|---|---|\n| Jul 2025 | 7.1% | 146/90 (office) |\n| Jan 2026 | 7.9% | 148/92 (office) |\n| Jun 2026 | **8.4%** | **148/92 (home avg)** |\n\n- A1c up **+1.3 points** on metformin 1000 mg BID — already max → **monotherapy failure**.\n- BP above the **<130/80** diabetes target at *every* check, already on 2 agents → uncontrolled.\n\n## Why this is more than 'rising sugar'\n- **UACR 62 mg/g (Apr 2026) + eGFR 68** = early diabetic kidney disease (A2). This makes an **SGLT2 inhibitor the guideline-preferred second agent** (cardio-renal protection), independent of glucose. **GLP-1 RA** is the alternative and would also help weight (BMI 31.2).\n- **LDL 118 on atorvastatin 40** — above the <70 diabetes goal; statin not yet optimized.\n\n## Guideline-aligned next steps to tee up\n1. **Add a second glucose-lowering agent — SGLT2 inhibitor preferred** given albuminuria (GLP-1 RA if weight/cost favor it). Metformin stays.\n2. **Intensify antihypertensives** — add a CCB (e.g., amlodipine) or revisit regimen toward <130/80.\n3. **Optimize lipids** — consider higher-intensity statin ± ezetimibe for LDL <70.\n\n## Confirm BEFORE escalating\n- Adherence + pharmacy refill history (true failure vs missed doses)\n- Home BP technique/cuff; SGLT2 cautions (genital/UTI infections, volume, DKA history)\n- Eye exam and foot exam up to date?\n\n## Quick flags\n- ⚠️ Sulfa allergy on chart, but **tolerates HCTZ (a sulfonamide)** — reconcile.\n- ⚠️ K 4.2, eGFR 68 — safe ranges for adding SGLT2i and adjusting BP meds."
+    }
+  },
+  {
+    "id": "walter-okonkwo-polypharmacy-ddi",
+    "name": "Walter Okonkwo",
+    "age": 76,
+    "sex": "Male",
+    "clinicalTheme": "Polypharmacy in an older adult with a hidden CYP3A4 drug-drug interaction: clarithromycin started for sinusitis while on simvastatin 40 mg, markedly raising rhabdomyolysis risk inside an 11-drug list.",
+    "demonstrates": "The assistant scanning an 11-medication list plus a recent walk-in note and surfacing a non-obvious, contraindicated interaction (clarithromycin + simvastatin), with a plain-language rationale and concrete options (hold the statin, switch the antibiotic, or swap to a non-CYP3A4 statin) — including the easy-to-miss secondary apixaban/amlodipine interactions.",
+    "problemList": [
+      "Hypertension",
+      "Type 2 diabetes mellitus (A1c 7.8%)",
+      "Mixed hyperlipidemia",
+      "Coronary artery disease — s/p drug-eluting stent to RCA (2019)",
+      "Paroxysmal atrial fibrillation — CHA2DS2-VASc 4, anticoagulated",
+      "Chronic kidney disease, stage 3a (eGFR ~52)",
+      "Hypothyroidism",
+      "Benign prostatic hyperplasia",
+      "Gastroesophageal reflux disease",
+      "Gout",
+      "Osteoarthritis, bilateral knees",
+      "Acute bacterial rhinosinusitis (current — on clarithromycin)"
+    ],
+    "medications": [
+      "Lisinopril 20 mg PO daily",
+      "Amlodipine 10 mg PO daily",
+      "Metoprolol succinate 50 mg PO daily",
+      "Apixaban 5 mg PO twice daily",
+      "Aspirin 81 mg PO daily",
+      "Simvastatin 40 mg PO at bedtime",
+      "Metformin 1000 mg PO twice daily",
+      "Levothyroxine 88 mcg PO daily",
+      "Omeprazole 20 mg PO daily",
+      "Tamsulosin 0.4 mg PO daily",
+      "Allopurinol 100 mg PO daily",
+      "NEW/ACUTE — Clarithromycin 500 mg PO twice daily x10 days (started 2026-06-19 at urgent care for sinusitis)",
+      "Acetaminophen 500 mg PO as needed for pain"
+    ],
+    "allergies": [
+      "Penicillin — urticaria/hives as a child (reported)",
+      "Sulfa drugs — GI upset/nausea (intolerance, not a true allergy)"
+    ],
+    "upcomingVisitReason": "Routine chronic-disease follow-up (HTN, type 2 diabetes, paroxysmal AF) with medication reconciliation. Patient also asked to recheck the sinus infection that an urgent care treated last week and to \"make sure all my pills are okay together.\"",
+    "labs": [
+      {
+        "name": "HbA1c",
+        "value": "7.8%",
+        "date": "2026-02-10",
+        "flag": "H"
+      },
+      {
+        "name": "LDL-C",
+        "value": "68 mg/dL",
+        "date": "2026-02-10",
+        "flag": "normal (at goal on statin)"
+      },
+      {
+        "name": "eGFR",
+        "value": "52 mL/min/1.73m2",
+        "date": "2026-02-10",
+        "flag": "L"
+      },
+      {
+        "name": "Creatinine",
+        "value": "1.42 mg/dL",
+        "date": "2026-02-10",
+        "flag": "H"
+      },
+      {
+        "name": "Potassium",
+        "value": "4.5 mmol/L",
+        "date": "2026-02-10",
+        "flag": "normal"
+      },
+      {
+        "name": "ALT",
+        "value": "24 U/L",
+        "date": "2026-02-10",
+        "flag": "normal"
+      },
+      {
+        "name": "Creatine kinase (CK)",
+        "value": "132 U/L",
+        "date": "2026-02-10",
+        "flag": "normal (baseline — none drawn since clarithromycin started)"
+      },
+      {
+        "name": "TSH",
+        "value": "2.3 mIU/L",
+        "date": "2026-02-10",
+        "flag": "normal"
+      },
+      {
+        "name": "Hemoglobin",
+        "value": "13.6 g/dL",
+        "date": "2026-02-10",
+        "flag": "normal"
+      }
+    ],
+    "priorNotes": [
+      {
+        "date": "2026-06-19",
+        "type": "Urgent care walk-in",
+        "author": "J. Marsh, PA-C — FastCare Urgent Care",
+        "text": "URGENT CARE walk-in. CC: facial pressure + congestion x10d, now worse last 2-3d. Pt c/o L maxillary pain, thick yellow-green nasal d/c, post-nasal drip, low-grade fever to 100.4 at home. No SOB, no vision changes, no double vision, no severe HA. Hx (per pt): HTN, DM2, afib on a blood thinner, high cholesterol, thyroid, prostate — long med list, pt unsure of all the names, says wife keeps the list + a pharmacy card at home. PMH per pt. ALLERGY: PCN (hives as a kid). Vitals T 99.1 BP 148/86 HR 72 (irreg) RR 16 SpO2 97% RA. Exam: L maxillary sinus tender to palp, turbinates boggy/erythematous, TMs clear b/l, OP mild cobblestoning no exudate, neck supple, lungs CTA, heart irreg irreg no murmur appreciated. A: acute bacterial rhinosinusitis. P: PCN-allergic -> clarithromycin 500mg BID x10d. Saline rinse, intranasal fluticasone, tylenol prn. Return precautions: worsening pain, vision change, periorbital swelling, neck stiffness, high fever. Advised f/u with own PCP for the rest of the meds — did not reconcile full home list here. — J.M., PA-C"
+      },
+      {
+        "date": "2026-02-10",
+        "type": "PCP chronic-care follow-up",
+        "author": "A. Devereux, MD — internal medicine",
+        "text": "S: 76M in for 3-mo f/u of DM2/HTN/afib. States doing 'ok overall.' No chest pain, no SOB, no palpitations he can feel. Home BP log avg 138/80s. Checks fingersticks 'some mornings' fasting 130-160s, no lows. Specifically asked re: muscle aches on the statin -> none, no weakness. Adherent, wife fills the weekly pillbox. Walks the dog 20 min/day.\nO: BP 142/84, HR 68 irreg, wt 198 lb (down 3), BMI 30.1. NAD. Heart irreg no m/r/g. Lungs clear. No LE edema. Feet: monofilament intact, no ulcers/lesions.\nLabs today: A1c 7.8 (up from 7.4 in Nov), LDL 68, eGFR 52 (stable CKD3a), Cr 1.42, K 4.5, ALT 24, CK 132 (baseline), TSH 2.3, Hgb 13.6.\nA/P:\n- DM2 — A1c creeping up. Reinforced diet/portion. Cont metformin 1000 BID. If >8.0 next visit will add second agent.\n- HTN — just above goal. Cont lisinopril 20 + amlodipine 10. Keep home BP log.\n- Hyperlipidemia / CAD secondary prevention — LDL at goal on simvastatin 40 qhs, tolerating, no myalgias. Continue.\n- Paroxysmal AF — rate-controlled on metoprolol succ 50, CHA2DS2-VASc 4 -> cont apixaban 5 BID, no bleeding, no missed doses.\n- CKD3a — stable, avoid nephrotoxins.\n- Hypothyroid — TSH wnl, cont levothyroxine 88 mcg.\n- BPH / GERD / gout — stable on tamsulosin 0.4 / omeprazole 20 / allopurinol 100.\n11 chronic meds total, reconciled w/ pharmacy list, all continued. f/u 3 mo, labs before. — A. Devereux MD"
+      },
+      {
+        "date": "2025-09-22",
+        "type": "Cardiology follow-up",
+        "author": "R. Okafor, MD — cardiology",
+        "text": "Cards f/u. Paroxysmal AF (dx 2024), CHA2DS2-VASc 4, on apixaban 5 BID — denies bleeding/bruising, no missed doses per pt + wife. Rate control: metoprolol succinate 50 daily, resting HR 60-70s, no symptomatic episodes since spring. Stable CAD — remote DES to RCA (2019), no angina, no exertional sx, walks without chest pain. Echo (2024): LVEF 55%, mild LVH, no significant valvular dz. BP 136/78 in office. Cont guideline statin for secondary prevention — currently simvastatin, LDL well controlled per PCP. No changes today. RTC 12 mo or prn. — R. Okafor, Cardiology"
+      },
+      {
+        "date": "2025-03-04",
+        "type": "Annual wellness visit",
+        "author": "A. Devereux, MD — internal medicine",
+        "text": "Medicare AWV + annual exam. 75yo M, multiple chronic conditions, polypharmacy = 11 meds, reconciled today with wife + printed pharmacy list (she brought it in). No new complaints, energy good, denies falls in past yr, no dizziness on tamsulosin. Colonoscopy 2021 normal. Vaccines: gave PCV20 today, flu done in fall. A1c 7.2, LDL 74 at the time, BP 134/80. Discussed possibility of deprescribing given the number of meds, but pt + cardiology want to continue statin, apixaban and beta-blocker for his heart — agree, all clinically indicated. Reinforced: bring the full med list to EVERY visit/ER/urgent care, esp the blood thinner. Advance directive on file. Meds all continued. — A. Devereux MD"
+      }
+    ],
+    "goldBriefing": {
+      "oneLiner": "76M on 11 chronic medications whom an urgent care started on clarithromycin 500 mg BID (06/19) for sinusitis while he remains on simvastatin 40 mg nightly — a contraindicated CYP3A4 combination that sharply raises his risk of muscle injury/rhabdomyolysis, compounded by age and CKD stage 3a.",
+      "keyHistory": [
+        "Polypharmacy: 11 chronic meds for HTN, T2DM (A1c 7.8%), CAD s/p RCA stent (2019), paroxysmal AF (apixaban, CHA2DS2-VASc 4), CKD3a, hypothyroid, BPH, GERD, gout.",
+        "06/19/2026 urgent care started clarithromycin 500 mg BID x10 days for acute bacterial rhinosinusitis; PA chose a macrolide because of the penicillin allergy and explicitly did NOT reconcile the full home med list ('pt unsure of names').",
+        "Still taking simvastatin 40 mg at bedtime — confirmed and well tolerated (no myalgias) at the 02/2026 PCP visit; LDL at goal (68).",
+        "Also on apixaban 5 mg BID and amlodipine 10 mg — both also cleared via CYP3A4/P-gp, so clarithromycin raises their levels too.",
+        "Baseline CK 132 (normal, 02/10/2026); no CK or symptom check done since the antibiotic was started.",
+        "CKD3a (eGFR ~52) and age 76 independently increase statin-associated muscle toxicity risk.",
+        "Penicillin allergy (childhood hives) on file — drove the macrolide choice; reaction never formally characterized."
+      ],
+      "followUpQuestions": [
+        {
+          "question": "Since starting the clarithromycin (~06/19), have you had any new muscle aches, soreness, weakness, or dark/cola-colored urine?",
+          "why": "Clarithromycin is a strong CYP3A4 inhibitor and simvastatin is broken down by CYP3A4; together simvastatin blood levels can rise several-fold, and these are the earliest warning signs of statin myopathy/rhabdomyolysis. His age and CKD3a amplify the risk.",
+          "priority": "high"
+        },
+        {
+          "question": "Are you still taking the simvastatin every night, and how many days of the antibiotic are left?",
+          "why": "Confirms the overlap is actually occurring and sets the urgency — the safest immediate move is to hold the statin for the remaining clarithromycin days (the combination is FDA-contraindicated).",
+          "priority": "high"
+        },
+        {
+          "question": "Is the sinus infection actually getting better, and could we switch or stop the antibiotic?",
+          "why": "If treatment is still needed, swapping to a non-CYP3A4 antibiotic (azithromycin or doxycycline — also penicillin-safe) removes the interaction entirely and is often the cleanest fix.",
+          "priority": "high"
+        },
+        {
+          "question": "Any unusual bruising, bleeding gums, nosebleeds, or black/tarry stools?",
+          "why": "Clarithromycin also inhibits the CYP3A4/P-glycoprotein clearance of apixaban, raising anticoagulant levels and bleeding risk — an easy-to-miss second interaction in this same list.",
+          "priority": "medium"
+        },
+        {
+          "question": "Any new ankle swelling, lightheadedness, or low blood pressure readings at home?",
+          "why": "Amlodipine is another CYP3A4 substrate; clarithromycin can increase its level and cause exaggerated hypotension/edema in an older adult.",
+          "priority": "low"
+        },
+        {
+          "question": "Can we pin down what the penicillin reaction actually was, and when?",
+          "why": "A vague childhood 'hives' label is steering antibiotic choices toward macrolides; clarifying it may reopen safer, non-interacting options now and in the future.",
+          "priority": "low"
+        }
+      ],
+      "flags": [
+        "DRUG INTERACTION (HIGH / contraindicated): clarithromycin + simvastatin 40 mg — strong CYP3A4 inhibition markedly increases simvastatin exposure and rhabdomyolysis risk.",
+        "ACTION — choose one today: (1) hold simvastatin for the rest of the clarithromycin course (simplest), OR (2) switch the antibiotic to azithromycin or doxycycline (non-CYP3A4, penicillin-safe), OR (3) temporarily switch to pravastatin/rosuvastatin (not CYP3A4-dependent).",
+        "SECONDARY INTERACTION (MEDIUM): clarithromycin increases apixaban exposure (CYP3A4 + P-gp) -> bleeding risk; screen for bleeding/bruising.",
+        "SECONDARY INTERACTION (LOW): clarithromycin can raise amlodipine levels -> hypotension/edema.",
+        "Risk amplifiers: age 76 + CKD stage 3a (eGFR 52) raise statin myotoxicity risk.",
+        "Monitoring gap: no CK or muscle-symptom check since antibiotic started (baseline CK 132, Feb 2026).",
+        "Med-reconciliation gap: urgent care did not reconcile the full 11-drug list; patient could not name his meds.",
+        "Allergy: penicillin (childhood hives) — drove the macrolide choice; reaction not characterized."
+      ],
+      "briefingMarkdown": "# Walter Okonkwo — 76M | Chronic-care follow-up + post-urgent-care recheck\n\n**One-liner:** 76M on **11 chronic meds**. An urgent care started **clarithromycin 500 mg BID (06/19/2026)** for a sinus infection while he stays on **simvastatin 40 mg nightly** — a *contraindicated* CYP3A4 combination that sharply raises his risk of muscle injury/rhabdomyolysis.\n\n## TOP ACTION — drug interaction (do this visit)\n- **Why it matters (plain language):** Clarithromycin blocks the liver enzyme (CYP3A4) that clears simvastatin, so the statin can build up to several times its normal level. That can cause painful muscle breakdown (rhabdomyolysis) that can injure the kidneys — **higher risk here because he's 76 with stage-3 CKD.**\n- **Fix — pick ONE:**\n  1. **Hold simvastatin** for the remaining days of the antibiotic (simplest; a short statin pause is safe), **or**\n  2. **Switch the antibiotic** to azithromycin or doxycycline (don't inhibit CYP3A4, and both are penicillin-safe), **or**\n  3. Temporarily switch to **pravastatin/rosuvastatin** (not cleared by CYP3A4).\n- **Ask:** new muscle aches, weakness, or dark/cola urine? Check **CK** if any symptoms (baseline CK 132, Feb 2026 — none since).\n\n## Watch — second interaction in the same list\n- Clarithromycin also raises **apixaban** levels (CYP3A4 + P-gp) -> **bleeding risk**; and can raise **amlodipine** -> low BP/edema. Screen for bruising/bleeding and dizziness until the antibiotic is finished.\n\n## Active problems\nHTN | T2DM (A1c **7.8 ↑**) | CAD s/p RCA stent 2019 | paroxysmal AF (apixaban, CHA2DS2-VASc 4) | **CKD3a (eGFR 52)** | hypothyroid | BPH | GERD | gout\n\n## Allergy\n**Penicillin** (childhood hives) — this drove the urgent care's macrolide choice. Doxycycline is a penicillin-safe AND non-interacting alternative if the sinusitis still needs treatment. Worth characterizing the reaction.\n\n## Process note\nUrgent care did **not** reconcile the full med list (patient couldn't name his meds). Reinforce: carry the current med list — especially the blood thinner and statin — to every ER/urgent-care visit."
+    }
+  },
+  {
+    "id": "priya-nair-allergy-contradiction",
+    "name": "Priya Nair",
+    "age": 44,
+    "sex": "Female",
+    "clinicalTheme": "Cross-visit contradiction: a documented drug-class allergy (sulfonamide/\"sulfa\" — hives) versus a later urgent-care prescription of a drug in that same class (trimethoprim-sulfamethoxazole / Bactrim). The urgent-care note also silently recorded \"NKDA,\" so both contradictory facts were carried forward in isolation.",
+    "demonstrates": "The assistant reconciles the longitudinal record across visits instead of treating each note independently: it recognizes that trimethoprim-sulfamethoxazole (Bactrim) is a sulfonamide antibiotic, that it was prescribed at the 2026-05-18 urgent-care visit despite a documented sulfa allergy (hives, 2023 intake), and that the urgent-care note erroneously listed \"NKDA.\" It connects the patient's post-treatment itching/bumps (portal message) to a possible reaction/re-exposure, and raises the contradiction as a high-priority clarification BEFORE the visit rather than carrying both facts forward.",
+    "problemList": [
+      "Hypothyroidism, autoimmune (Hashimoto's thyroiditis)",
+      "Migraine without aura",
+      "Prediabetes / impaired fasting glucose",
+      "Iron deficiency anemia",
+      "Recurrent urinary tract infections (uncomplicated cystitis)",
+      "GERD"
+    ],
+    "medications": [
+      "Levothyroxine 88 mcg PO daily (increased from 75 mcg on 2026-01-20)",
+      "Sumatriptan 50 mg PO PRN migraine, max 200 mg/24h",
+      "Omeprazole 20 mg PO daily",
+      "Ferrous sulfate 325 mg PO daily",
+      "Trimethoprim-sulfamethoxazole (Bactrim DS) 800/160 mg PO BID x3 days — prescribed 2026-05-18 at urgent care (CONTRADICTS documented sulfa allergy; reconcile)",
+      "Cetirizine 10 mg PO PRN (patient-reported OTC use)"
+    ],
+    "allergies": [
+      "Sulfonamide antibiotics (sulfamethoxazole / \"sulfa\") — reaction: hives; documented at 2023 new-patient intake and re-confirmed on PCP allergy review 2025-09-12 and 2026-01-20",
+      "No other known drug allergies (penicillin and nitrofurantoin previously tolerated)"
+    ],
+    "labs": [
+      {
+        "name": "TSH",
+        "value": "4.8 mIU/L",
+        "date": "2025-09-12",
+        "flag": "High"
+      },
+      {
+        "name": "TSH",
+        "value": "5.6 mIU/L",
+        "date": "2026-01-20",
+        "flag": "High"
+      },
+      {
+        "name": "Hemoglobin A1c",
+        "value": "6.0%",
+        "date": "2025-09-12",
+        "flag": "High (prediabetes)"
+      },
+      {
+        "name": "Hemoglobin",
+        "value": "11.4 g/dL",
+        "date": "2025-09-12",
+        "flag": "Low"
+      },
+      {
+        "name": "Ferritin",
+        "value": "14 ng/mL",
+        "date": "2025-09-12",
+        "flag": "Low"
+      },
+      {
+        "name": "eGFR",
+        "value": ">60 mL/min/1.73m2",
+        "date": "2025-09-12",
+        "flag": "Normal"
+      },
+      {
+        "name": "Urinalysis",
+        "value": "Leukocyte esterase positive, nitrites positive, WBC 25-50/hpf, few bacteria",
+        "date": "2026-05-18",
+        "flag": "Abnormal"
+      },
+      {
+        "name": "Urine culture",
+        "value": "E. coli >100,000 CFU/mL; susceptible to nitrofurantoin, fosfomycin, and TMP-SMX",
+        "date": "2026-05-20",
+        "flag": "Positive"
+      }
+    ],
+    "upcomingVisitReason": "Follow-up after urgent-care UTI visit (2026-05-18) and overdue thyroid lab recheck; patient also wants to discuss frequent urinary infections.",
+    "priorNotes": [
+      {
+        "date": "2025-09-12",
+        "author": "Dr. Marisol Vance, MD (PCP)",
+        "type": "Annual wellness visit",
+        "text": "AWV, established pt. 44yo F. PMH: Hashimoto's hypothyroid, migraine, prediabetes, IDA, GERD. c/o intermittent fatigue, HA ~1-2/mo abortive w/ sumatriptan - good relief. No CP/SOB/palpitations. h/o UTI x1 last fall, resolved w/ nitrofurantoin (tolerated well). Wt up ~4 lb since last yr.\nVitals: BP 128/82, HR 74, T 98.2, BMI 28.6, RR 14.\nALLERGIES reviewed: SULFA -> hives (per 2023 intake). NKDA otherwise. PCN & nitrofurantoin tolerated.\nMeds: levothyroxine 75 mcg daily, sumatriptan 50 prn, omeprazole 20 daily, FeSO4 325 daily.\nLabs: TSH 4.8 (H) - up from 2.9, ?adherence vs underreplacement. A1c 6.0. Hgb 11.4 (L), ferritin 14 (L) - cont iron, recheck.\nA/P: 1) Hypothyroid - TSH up, counseled on consistent dosing/empty stomach; hold dose change, recheck TSH 8wk. 2) Prediabetes - lifestyle, recheck A1c. 3) IDA - cont FeSO4. 4) Migraine - stable, refilled sumatriptan. f/u 3 mo or sooner."
+      },
+      {
+        "date": "2026-01-20",
+        "author": "Aria Donnelly, NP",
+        "type": "Telehealth follow-up",
+        "text": "Telehealth f/u hypothyroidism. Pt reports fatigue somewhat better but still tired. Admits missing levo ~1-2x/wk, sometimes takes w/ coffee + iron together. No new sx.\nNo vitals (virtual).\nTSH 5.6 (H) on recheck. Allergy list reviewed - sulfa (hives) still listed, confirmed w/ pt.\nA/P: Suboptimal TSH likely adherence + dosing technique. Increased levothyroxine 75 -> 88 mcg daily. Counseled: take on empty stomach, separate from iron/coffee by >=30-60 min. Recheck TSH in 6-8 wks. Continue iron, recheck CBC/ferritin then too. Pt verbalized understanding."
+      },
+      {
+        "date": "2026-05-18",
+        "author": "Dr. Benedict Okafor, MD — QuickCare Urgent Care (outside facility)",
+        "type": "Urgent care visit",
+        "text": "UC walk-in. 44F c/o dysuria, urinary frequency x3 days, mild suprapubic pressure. Denies fever, flank pain, n/v, vaginal d/c. Not pregnant - LMP ~2 wks ago, reliable. Sexually active, monogamous.\nVS: BP 122/78, HR 80, T 98.6, SpO2 99%. Abd soft, mild suprapubic tenderness, no CVA tenderness.\nUA: +LE, +nitrites, WBC 25-50, few bacteria -> uncomplicated cystitis.\nAllergies: NKDA (per pt today). PMH: hypothyroid (home med levothyroxine).\nPlan: Rx Bactrim DS (TMP-SMX) 1 tab PO BID x3 days. Pushed fluids. Urine culture sent. RTC or see PCP if not improved 48-72h or fever/flank pain."
+      },
+      {
+        "date": "2026-06-02",
+        "author": "Tomas Reyes, RN (triage)",
+        "type": "Patient portal message + triage",
+        "text": "Portal msg from pt, verbatim: 'Hi - I finished the antibiotic urgent care gave me for the bladder infection and my symptoms are basically gone. I did get kind of itchy with a few small bumps on my forearms around day 2-3 but they faded on their own. Should I do anything? Also I think I'm due for my thyroid blood test.'\nTriage: UTI sx resolved per pt, no fever/flank pain. Advised OTC antihistamine prn for itch, monitor. Will route to PCP to order thyroid recheck labs and address f/u. No acute distress reported."
+      }
+    ],
+    "goldBriefing": {
+      "oneLiner": "44F with Hashimoto's hypothyroidism, migraines, prediabetes, and recurrent UTIs whose chart documents a sulfa antibiotic allergy (hives, 2023) — yet a 2026-05-18 urgent-care visit prescribed trimethoprim-sulfamethoxazole (Bactrim) for cystitis and recorded 'NKDA'; she then reported itching/bumps after taking it. Reconcile the allergy-vs-prescription contradiction before today's visit.",
+      "keyHistory": [
+        "Documented sulfonamide ('sulfa') allergy with hives — recorded at 2023 intake, re-confirmed by PCP on 2025-09-12 and 2026-01-20",
+        "2026-05-18 urgent care diagnosed uncomplicated cystitis and prescribed Bactrim DS (trimethoprim-sulfamethoxazole, a sulfonamide) — the urgent-care note listed allergies as 'NKDA,' so the sulfa allergy was not carried forward",
+        "2026-06-02 portal message: UTI symptoms resolved but patient noted itching and small bumps on forearms on days 2-3 of the antibiotic that faded — possible mild allergic reaction / sulfa re-exposure",
+        "Recurrent UTIs: at least 2 episodes in ~12 months; prior episode (fall 2025) treated successfully with nitrofurantoin, which she tolerated",
+        "Hypothyroidism with under-replaced TSH (4.8 then 5.6, both High); levothyroxine increased 75 -> 88 mcg on 2026-01-20 with adherence/timing counseling; thyroid recheck now overdue",
+        "Iron deficiency anemia (Hgb 11.4 L, ferritin 14 L) on ferrous sulfate; prediabetes (A1c 6.0%)",
+        "Urine culture (2026-05-20): E. coli susceptible to nitrofurantoin, fosfomycin, and TMP-SMX — so non-sulfa options were available"
+      ],
+      "followUpQuestions": [
+        {
+          "question": "Did Ms. Nair actually fill and take the trimethoprim-sulfamethoxazole (Bactrim) from urgent care, and exactly what happened with the itching/bumps on days 2-3 — any hives, facial/lip swelling, trouble breathing, or just localized itch?",
+          "why": "Her chart documents a sulfa allergy with hives; the urgent-care note missed it and prescribed a sulfonamide. The day 2-3 itching/bumps may be a real (mild) reaction or re-exposure. Characterizing severity determines whether this is a true allergy to reinforce, an intolerance, or anaphylaxis risk, and whether she needs evaluation.",
+          "priority": "high"
+        },
+        {
+          "question": "Confirm and re-document the sulfonamide allergy and reaction, then correct the contradictory 'NKDA' entry from the outside urgent-care note in the EHR allergy list.",
+          "why": "The allergy was silently dropped at urgent care, creating a documented contradiction that could repeat. Reconciling the allergy list now prevents the next prescriber from making the same near-miss.",
+          "priority": "high"
+        },
+        {
+          "question": "Did the cystitis fully resolve, and given recurrent UTIs, should we switch future first-line therapy to a non-sulfa agent she tolerates (e.g., nitrofurantoin per the culture susceptibilities) and consider a recurrent-UTI workup/prevention plan?",
+          "why": "Culture grew E. coli susceptible to nitrofurantoin and fosfomycin (both non-sulfa) — appropriate alternatives exist. This is her 2nd+ UTI in a year, warranting a documented preferred non-sulfa regimen and possible prevention discussion.",
+          "priority": "medium"
+        },
+        {
+          "question": "Order overdue thyroid labs (TSH +/- free T4) and recheck CBC/ferritin; review levothyroxine adherence and dosing technique (empty stomach, separated from iron/coffee).",
+          "why": "Last TSH was 5.6 (High) in January after a dose increase with documented missed doses and co-administration with iron/coffee; the recheck is now overdue and she is asking for it. IDA monitoring is also due.",
+          "priority": "medium"
+        }
+      ],
+      "flags": [
+        "ALLERGY x PRESCRIPTION CONTRADICTION: Documented sulfa allergy (hives, 2023, re-confirmed 2025-09-12 & 2026-01-20) vs. trimethoprim-sulfamethoxazole (Bactrim DS) prescribed at urgent care 2026-05-18. Bactrim IS a sulfonamide. Reconcile before the visit.",
+        "DOCUMENTATION GAP: Outside urgent-care note recorded allergies as 'NKDA' — the sulfa allergy was not carried forward across facilities, causing the near-miss. Correct the allergy list.",
+        "POSSIBLE REACTION: Patient reported itching + forearm bumps on days 2-3 of the antibiotic (portal 2026-06-02); triage did not connect this to the sulfa allergy. Assess as possible drug reaction / re-exposure.",
+        "SAFER ALTERNATIVE EXISTED: Urine culture showed E. coli susceptible to nitrofurantoin and fosfomycin (non-sulfa); patient previously tolerated nitrofurantoin.",
+        "Recurrent UTI (>=2 in ~12 months) — consider workup/prevention.",
+        "Hypothyroidism under-replaced (TSH 5.6 H) and thyroid recheck overdue."
+      ],
+      "briefingMarkdown": "## Priya Nair — 44F | Visit: post-UTI follow-up + overdue thyroid labs (2026-06-27)\n\n**One-liner:** Hashimoto's hypothyroidism, migraines, prediabetes, recurrent UTIs. Chart documents a **sulfa allergy (hives)** — but a **2026-05-18 urgent-care visit prescribed Bactrim (trimethoprim-sulfamethoxazole, a sulfonamide)** and logged 'NKDA.' She later reported **itching/bumps** after taking it.\n\n### Top priority — reconcile the allergy contradiction\n- **Allergy on file:** sulfonamide -> hives (2023 intake; re-confirmed 09/2025 & 01/2026).\n- **Conflicting Rx:** Bactrim DS BID x3d at QuickCare urgent care 05/18; that note recorded **allergies = NKDA** (allergy dropped between facilities).\n- **Signal of harm:** portal msg 06/02 — itching + small forearm bumps days 2-3, faded. Possible mild sulfa reaction / re-exposure.\n- **Action:** ask what she took and exactly how she reacted (localized itch vs. hives/swelling/SOB); re-document allergy; correct the EHR.\n\n### Key history\n- Hypothyroid: TSH 4.8 (H, 09/25) -> 5.6 (H, 01/26); levo 75 -> 88 mcg with adherence/timing counseling. **Thyroid recheck overdue.**\n- Recurrent UTI: >=2 in 12 mo; prior episode treated with **nitrofurantoin (tolerated)**. Culture 05/20 = E. coli, **susceptible to nitrofurantoin & fosfomycin** (non-sulfa options existed).\n- IDA (Hgb 11.4 L, ferritin 14 L) on FeSO4; prediabetes (A1c 6.0%); GERD; migraine (stable on sumatriptan).\n\n### Meds\nLevothyroxine 88 mcg daily; sumatriptan 50 mg PRN; omeprazole 20 mg daily; ferrous sulfate 325 mg daily; (Bactrim DS — completed, contraindicated by allergy); cetirizine PRN.\n\n### Do today\n1. Clarify/characterize the sulfa exposure & reaction; re-document allergy and fix the 'NKDA' error.\n2. Confirm cystitis resolved; set **non-sulfa** preferred agent (nitrofurantoin) for future UTIs; consider recurrent-UTI workup.\n3. Order TSH (+/- free T4) and CBC/ferritin; reinforce levo timing.\n\n**Flags:** sulfa-allergy vs Bactrim contradiction - cross-facility documentation gap - possible drug reaction - recurrent UTI - under-replaced thyroid."
+    }
+  },
+  {
+    "id": "gene-hollis-stale-data",
+    "name": "Gene Hollis",
+    "age": 63,
+    "sex": "Male",
+    "clinicalTheme": "Stale and missing monitoring data — gap detection (overdue renal/electrolyte labs on an ACE inhibitor, stale lipids on a statin, and no recent blood pressure), prompting the assistant to propose the specific labs and vitals to capture today rather than only summarizing what is present.",
+    "demonstrates": "The assistant detecting gaps rather than only summarizing what is present: it should flag that renal function and electrolytes have not been monitored despite chronic lisinopril, that lipids are stale despite atorvastatin, and that no BP has been recorded since early 2024 — then propose the specific orders (BMP, fasting lipid, BP/vitals, and an A1c recheck) to capture at today's visit. The non-obvious win is connecting the recurring OTC ibuprofen use and continued telehealth ACE-inhibitor refills to an unmonitored AKI/hyperkalemia risk.",
+    "problemList": [
+      "Essential hypertension",
+      "Mixed hyperlipidemia",
+      "Prediabetes (impaired fasting glucose)",
+      "Osteoarthritis, right knee",
+      "Overweight (BMI ~29)",
+      "Former tobacco use (quit 2019, ~20 pack-year history)"
+    ],
+    "medications": [
+      "Lisinopril 20 mg PO daily",
+      "Atorvastatin 40 mg PO daily",
+      "Aspirin 81 mg PO daily",
+      "Ibuprofen 400-600 mg PO PRN (OTC, self-directed for knee pain)"
+    ],
+    "allergies": [
+      "Penicillin — hives (per patient report)"
+    ],
+    "upcomingVisitReason": "Routine follow-up of hypertension and hyperlipidemia; chronic medication refills (lisinopril, atorvastatin). Scheduled office visit 2026-06-27 at Maple Hollow Family Medicine.",
+    "priorNotes": [
+      {
+        "date": "2024-02-12",
+        "type": "Office visit (in-person)",
+        "author": "Priya Okonkwo, MD",
+        "text": "Est pt here for annual + med refills. HTN, HLD, prediabetes. No c/o CP, no sob, no LE edema, no HA. Feels well overall. Meds: lisinopril 20 mg & atorvastatin 40 mg daily — ~adherent, admits occ misses wkend doses. ASA 81. Quit smoking 2019. Takes OTC ibuprofen for R knee OA a few x/week — counseled re: NSAID + ACE-i, limit use.\nVitals: BP 138/86, rechecked 134/84 manual. HR 72, RR 14, T 98.2, wt 198 lb, BMI 29.4.\nExam: well-appearing, no distress. RRR no m/r/g. Lungs CTA. Abd soft NT. No LE edema. R knee mild crepitus, no effusion.\nLabs drawn today: BMP, fasting lipid, A1c (results back, see labs).\nA/P: (1) HTN — slightly above goal, cont lisinopril 20, recheck BP next visit. (2) HLD — cont atorvastatin 40. (3) Prediabetes A1c 5.9 — lifestyle, recheck. (4) Knee OA — limit NSAIDs.\nRTC 6 mo, REPEAT BMP + lipid at f/u. f/u sooner prn."
+      },
+      {
+        "date": "2025-01-09",
+        "type": "Telehealth (video)",
+        "author": "Dale Vance, NP",
+        "text": "TH video visit. c/o cough x5d, nasal congestion, low-grade subjective fevers, no sob, no wheeze. Likely viral URI. No vitals obtained (video only). Supportive care reviewed, fluids/rest, RTC or call if worsening sob or fever >3 more days.\nChronic meds: lisinopril 20, atorvastatin 40 — refilled 90d to pharmacy.\nNote: pt overdue for f/u labs since 2/2024 and has not been seen in office since. Advised to schedule fasting BMP + lipid and an in-person BP check. Pt agreeable, will arrange. -DV"
+      },
+      {
+        "date": "2025-09-22",
+        "type": "Portal refill / nurse encounter",
+        "author": "Marisol Trejo, RN",
+        "text": "med refill req via portal. lisinopril 20 daily + atorvastatin 40 daily, both 90d sent to pharmacy per protocol. pt msg states feels fine, no new sx, no CP/sob/edema. asked re home BP readings -> home cuff broken, hasn't replaced. no labs since last yr. encouraged to come in for fasting draw + BP, declined for now ('too busy w/ work'), says will try next mo. fwd to NP Vance for awareness. f/u prn."
+      },
+      {
+        "date": "2026-02-17",
+        "type": "Telephone encounter",
+        "author": "Dale Vance, NP",
+        "text": "Phone enc. Pt called re R knee pain flare, states using ibuprofen 400-600 mg 'most days' x couple wks. Reminded NSAID + lisinopril combo -> watch kidneys/BP, advised limit + try acetaminophen. No vitals this enc.\nStill on lisinopril 20 + atorvastatin 40. LAST LABS 2/2024 — STILL not done despite repeated advice; no BP on file since 2/2024 either. Pt finally agrees to be seen. Sent atorvastatin 40 (30-day bridge) to cover gap.\nPlan: book office visit for BP/vitals + fasting BMP + lipid, consider A1c recheck given prior prediabetes. -DV"
+      }
+    ],
+    "labs": [
+      {
+        "name": "Sodium",
+        "value": "139 mmol/L",
+        "date": "2024-02-12",
+        "flag": "Normal"
+      },
+      {
+        "name": "Potassium",
+        "value": "4.6 mmol/L",
+        "date": "2024-02-12",
+        "flag": "Normal (last checked >2 yr ago, on ACE inhibitor)"
+      },
+      {
+        "name": "Chloride",
+        "value": "102 mmol/L",
+        "date": "2024-02-12",
+        "flag": "Normal"
+      },
+      {
+        "name": "CO2 (bicarbonate)",
+        "value": "26 mmol/L",
+        "date": "2024-02-12",
+        "flag": "Normal"
+      },
+      {
+        "name": "BUN",
+        "value": "18 mg/dL",
+        "date": "2024-02-12",
+        "flag": "Normal"
+      },
+      {
+        "name": "Creatinine",
+        "value": "1.21 mg/dL",
+        "date": "2024-02-12",
+        "flag": "High-normal/borderline — no repeat since"
+      },
+      {
+        "name": "eGFR",
+        "value": "65 mL/min/1.73m²",
+        "date": "2024-02-12",
+        "flag": "Low (CKD G2 range) — stale, on ACE inhibitor + intermittent NSAID"
+      },
+      {
+        "name": "Glucose, fasting",
+        "value": "108 mg/dL",
+        "date": "2024-02-12",
+        "flag": "High (impaired fasting glucose)"
+      },
+      {
+        "name": "Hemoglobin A1c",
+        "value": "5.9 %",
+        "date": "2024-02-12",
+        "flag": "High (prediabetes) — never rechecked"
+      },
+      {
+        "name": "Total cholesterol",
+        "value": "178 mg/dL",
+        "date": "2024-02-12",
+        "flag": "Borderline — stale on statin"
+      },
+      {
+        "name": "LDL cholesterol",
+        "value": "96 mg/dL",
+        "date": "2024-02-12",
+        "flag": "Stale (>2 yr); current statin response unknown"
+      },
+      {
+        "name": "HDL cholesterol",
+        "value": "41 mg/dL",
+        "date": "2024-02-12",
+        "flag": "Low"
+      },
+      {
+        "name": "Triglycerides",
+        "value": "168 mg/dL",
+        "date": "2024-02-12",
+        "flag": "High"
+      },
+      {
+        "name": "ALT",
+        "value": "30 U/L",
+        "date": "2024-02-12",
+        "flag": "Normal (statin baseline)"
+      }
+    ],
+    "goldBriefing": {
+      "oneLiner": "63-year-old man with hypertension and hyperlipidemia on lisinopril 20 mg and atorvastatin 40 mg daily, here for routine follow-up — but his last BMP, lipid panel, and A1c are all from 2024-02-12 (>2 years old) and no blood pressure has been recorded since that same visit, despite continued telehealth refills of an ACE inhibitor and a statin.",
+      "keyHistory": [
+        "63M: HTN, mixed hyperlipidemia, prediabetes (A1c 5.9% in 2024), right-knee OA; former smoker (quit 2019, ~20 pack-years).",
+        "Chronic meds: lisinopril 20 mg daily, atorvastatin 40 mg daily, ASA 81 mg; uses OTC ibuprofen 400-600 mg 'most days' for knee pain.",
+        "Last in-person visit and last full vitals: 2024-02-12 — BP 138/86 → 134/84 (above goal), BMI 29.4.",
+        "Last BMP/lipid/A1c: all 2024-02-12 — Cr 1.21 (eGFR 65, CKD G2 range), K 4.6, LDL 96, HDL 41, TG 168, A1c 5.9%.",
+        "All 2025-2026 contacts were telehealth or phone (URI 1/2025, portal refill 9/2025, knee-pain call 2/2026); meds refilled each time without vitals or labs.",
+        "Monitoring repeatedly deferred: labs advised at 3 separate encounters but never drawn; home BP unavailable (cuff broken per 9/2025 note)."
+      ],
+      "followUpQuestions": [
+        {
+          "question": "Capture an in-office blood pressure (and full vitals) today, with a repeat manual reading if elevated.",
+          "why": "No BP has been documented since 2024-02-12, when he was above goal (138/86). Two-plus years of lisinopril refills have occurred with zero data confirming control, and no home readings exist (cuff broken).",
+          "priority": "high"
+        },
+        {
+          "question": "Order a basic metabolic panel (BMP) today — specifically creatinine, eGFR, and potassium.",
+          "why": "Chronic ACE-inhibitor therapy requires periodic renal/electrolyte monitoring; his last BMP (2/2024) showed Cr 1.21 / eGFR 65 (already CKD G2 range). The concurrent near-daily OTC ibuprofen plus lisinopril raises real AKI/hyperkalemia risk that has gone unchecked for >2 years.",
+          "priority": "high"
+        },
+        {
+          "question": "Order a fasting lipid panel today.",
+          "why": "He is on atorvastatin 40 mg, but the last lipids are from 2/2024, so current statin response and LDL goal attainment are unknown. Cannot make a continue/intensify decision without a fresh panel.",
+          "priority": "high"
+        },
+        {
+          "question": "Quantify and address the OTC NSAID use — how many ibuprofen doses per week, and offer acetaminophen / topical alternatives.",
+          "why": "Ibuprofen 'most days' on top of lisinopril (± reduced eGFR) is a triple/double-hit nephrotoxic combination; this is the non-obvious safety issue driving the urgency of the renal labs.",
+          "priority": "medium"
+        },
+        {
+          "question": "Recheck hemoglobin A1c.",
+          "why": "A1c was 5.9% (prediabetes) in 2/2024 and was never followed up; with overweight and HTN he warrants re-screening to catch progression to diabetes.",
+          "priority": "medium"
+        },
+        {
+          "question": "Reconcile adherence and the refill trail, and re-establish home BP monitoring.",
+          "why": "Multiple 90-day ACE-inhibitor/statin refills were issued via portal/telehealth without follow-up; confirm he is actually taking the medications, and replace the broken home BP cuff so future control can be tracked.",
+          "priority": "medium"
+        }
+      ],
+      "flags": [
+        "STALE VITALS: No blood pressure recorded since 2024-02-12 (>2 yr); HTN control on lisinopril cannot be assessed and last reading was above goal.",
+        "OVERDUE RENAL/ELECTROLYTE MONITORING: BMP last drawn 2024-02-12 — creatinine/eGFR (1.21 / 65) and potassium not rechecked despite chronic ACE inhibitor.",
+        "STALE LIPIDS ON STATIN: Lipid panel last 2024-02-12; statin efficacy on atorvastatin 40 mg unknown for >2 years.",
+        "DRUG-INTERACTION RISK, UNMONITORED: Near-daily OTC ibuprofen + lisinopril (± low-normal eGFR) — AKI/hyperkalemia risk with no recent renal labs.",
+        "UNFOLLOWED PREDIABETES: A1c 5.9% in 2024 never rechecked.",
+        "CARE-PATTERN GAP: All 2025-2026 encounters telehealth/phone; chronic meds refilled repeatedly without vitals or monitoring labs; labs advised 3x but never completed.",
+        "NO HOME BP DATA: Home cuff reported broken (9/2025) and not replaced."
+      ],
+      "briefingMarkdown": "## Gene Hollis — 63M · Routine HTN/HLD follow-up (2026-06-27)\n\n**One-liner:** Stable-sounding routine refill visit, but the chart has a **2+ year monitoring gap**. Last BMP, lipids, and A1c are all from **2024-02-12**, and **no BP has been recorded since then** — while lisinopril and atorvastatin have been refilled repeatedly via telehealth.\n\n### Active problems & meds\n- HTN · mixed hyperlipidemia · prediabetes · right-knee OA · overweight (BMI 29.4) · former smoker (quit 2019)\n- **Lisinopril 20 mg daily**, **atorvastatin 40 mg daily**, ASA 81 mg, **OTC ibuprofen 400-600 mg 'most days'** for knee\n- Allergy: penicillin (hives)\n\n### The gaps to close TODAY (this is the point of the visit)\n| Gap | Last data | Why it matters now |\n|---|---|---|\n| **Blood pressure / vitals** | 2024-02-12 (138/86 → 134/84, above goal) | On an ACE inhibitor with no control data for 2+ yr; no home readings (cuff broken) |\n| **BMP (Cr, eGFR, K⁺)** | 2024-02-12 (Cr 1.21, eGFR 65, K 4.6) | ACE-I needs periodic renal/K⁺ checks; **ibuprofen + lisinopril** = unmonitored AKI/hyperkalemia risk |\n| **Fasting lipid panel** | 2024-02-12 (LDL 96, HDL 41, TG 168) | Statin response unknown for 2+ yr — can't make continue/intensify call |\n| **A1c** | 2024-02-12 (5.9%, prediabetes) | Never rechecked despite risk factors |\n\n### Suggested orders / actions\n- ✅ In-office **BP** (repeat manual if high) + weight/BMI\n- ✅ **BMP** + **fasting lipid panel** + **A1c** (one fasting draw covers all three)\n- ✅ Address **NSAID use** — quantify, switch toward acetaminophen/topical; recheck renal labs before continuing\n- ✅ Med reconciliation / adherence; replace home BP cuff and set up home monitoring\n\n### Why this isn't just \"old labs\"\nThe non-obvious risk is the **combination**: a patient with a borderline eGFR (65) taking an ACE inhibitor **plus near-daily OTC ibuprofen**, refilled for 2+ years through telehealth with **no renal or electrolyte check and no BP**. The assistant's job today is to convert a 'routine refill' into the visit that finally captures the missing vitals and labs."
+    }
+  },
+  {
+    "id": "marcus-feeney-red-flag-weight-loss",
+    "name": "Marcus Feeney",
+    "age": 61,
+    "sex": "male",
+    "clinicalTheme": "Red-flag unintentional weight loss buried in free-text narrative during a routine medication-refill visit",
+    "demonstrates": "The assistant catches a red flag a clinician could easily skim past on a quick refill visit: it links an offhand \"pants are looser\" / poor-appetite comment in the last note to a quantified ~18 lb (~8%) weight drop across charted vitals, recognizes it as unintentional and never worked up, and proposes a targeted follow-up — quantify the loss, screen B-symptoms and GI red flags, and order age-appropriate workup/closing screening gaps — rather than just renewing the meloxicam.",
+    "problemList": [
+      "Osteoarthritis, bilateral knees (right > left)",
+      "Essential hypertension",
+      "Hyperlipidemia",
+      "Gastroesophageal reflux disease (GERD)",
+      "Prediabetes (A1c 5.9%)",
+      "Benign prostatic hyperplasia",
+      "Former tobacco use (~25 pack-years, quit 2017)",
+      "Family history of colorectal cancer (father, dx age 70)"
+    ],
+    "medications": [
+      "Meloxicam 15 mg PO once daily (chronic knee OA)",
+      "Acetaminophen 500 mg PO every 6 hours as needed for knee pain",
+      "Lisinopril 20 mg PO once daily",
+      "Atorvastatin 40 mg PO once daily",
+      "Omeprazole 20 mg PO once daily",
+      "Tamsulosin 0.4 mg PO once daily at bedtime"
+    ],
+    "allergies": [
+      "Penicillin (hives / rash)",
+      "Codeine (nausea, intolerance)"
+    ],
+    "upcomingVisitReason": "Medication refill for chronic knee osteoarthritis (meloxicam); patient also asking about a possible cortisone injection for the right knee. Booked as a brief refill / nurse-style visit.",
+    "priorNotes": [
+      {
+        "date": "2025-07-22",
+        "type": "Annual Wellness Visit / Physical",
+        "author": "Priya Okafor-Lindqvist, MD",
+        "text": "S: 60M here for annual, feels well overall. Chronic b/l knee OA, R>L, achy w/ stairs & cold weather, controlled w/ meloxicam 15 qd + tylenol prn, says adequate. No new complaints. Denies CP, SOB, no n/v, bowels regular, no melena. Sleep ok. Still walks the dog daily, just slower 2/2 knees.\nPMH: HTN, HLD, GERD, knee OA, prediabetes, BPH. Tob: quit 2017, ~25 pk-yr. EtOH 2-3 beers/wk social.\nFHx: father colon CA dx age 70 (deceased), mother T2DM/CAD.\nHealth maint: colonoscopy 2015 reportedly NORMAL -> now DUE for repeat; discussed, pt wants to wait til after summer travel. Never had LDCT - eligible as former smoker, offered, deferred. Flu vaccine given today.\nO: BP 138/86, HR 74, wt 214 lb (BMI 30.1), afebrile. Gen NAD. CV RRR no m/r/g. Lungs CTAB. Abd soft, NT/ND, no masses/HSM. Knees - crepitus b/l, trace effusion R, no warmth/erythema, ROM mildly limited R.\nA/P:\n- Knee OA: cont meloxicam 15 qd + tylenol prn, refilled. RICE, wt-loss counseled.\n- HTN: slightly above goal, cont lisinopril 20, recheck.\n- HLD: cont atorva 40, lipids today.\n- Prediabetes: A1c today, reinforce diet/exercise.\n- GERD: stable on omeprazole 20.\n- BPH: stable on tamsulosin, PSA today.\n- Screening: labs today; re-discuss colo + LDCT next visit.\nLabs ordered: CBC, CMP, lipid panel, A1c, TSH, PSA."
+      },
+      {
+        "date": "2025-10-30",
+        "type": "Nurse Visit / BP recheck",
+        "author": "Dale Wszolek, NP",
+        "text": "BP recheck per MD. Pt feels fine today, no complaints. Taking lisinopril daily, no dizziness/lightheaded. Denies HA, CP, edema.\nVitals: BP 134/82, HR 70, wt 212 lb.\nHome BP log wnl. A1c from July 5.9 - prediabetes, diet counseled again, gave handout. Cont current meds, no changes. RTC 6 mo or prn."
+      },
+      {
+        "date": "2026-02-19",
+        "type": "Office Visit - knee pain / med refill",
+        "author": "Priya Okafor-Lindqvist, MD",
+        "text": "S: here for the knee, wants refill on meloxicam - says it helps but R knee worse last few wks, esp the cold. Asking re: cortisone shot.\nIn passing mentions his pants are looser lately, kind of laughs it off, says he's 'finally losing the gut.' Adds appetite isn't great, food 'doesn't really appeal' like it used to, eating less than he used to. Not dieting. When asked quickly says 'stomach's fine,' no specific GI sx volunteered. Denies CP/SOB. No focal complaints otherwise.\nO: BP 132/80 HR 72 wt 194 lb. R knee - crepitus, small effusion, ROM limited by pain, no warmth/erythema.\nA/P:\n- Knee OA, R flare: cont meloxicam 15 qd, refilled x90d w/ refills. Discussed PT - referral given. Cortisone vs ortho referral if no better.\n- Cont lisinopril / atorva / omeprazole / tamsulosin - no changes today.\n- f/u prn, sooner if knee worse.\n(running behind - brief visit)"
+      },
+      {
+        "date": "2026-06-15",
+        "type": "Patient Portal Message",
+        "author": "Front desk / triage RN",
+        "text": "Pt msg: 'Hi, I'm about out of my knee medication (the meloxicam) and need to get it refilled. Can I get an appointment? Also wanted to ask the doctor about that cortisone shot we talked about. Thanks - Marcus.' -> Scheduled brief refill visit. Refill held pending visit per clinic policy (controlled-substance/chronic-med review). No new clinical info reported."
+      }
+    ],
+    "labs": [
+      {
+        "name": "Hemoglobin",
+        "value": "14.1 g/dL",
+        "date": "2025-07-22",
+        "flag": "normal"
+      },
+      {
+        "name": "WBC",
+        "value": "6.8 x10^9/L",
+        "date": "2025-07-22",
+        "flag": "normal"
+      },
+      {
+        "name": "Platelets",
+        "value": "243 x10^9/L",
+        "date": "2025-07-22",
+        "flag": "normal"
+      },
+      {
+        "name": "Hemoglobin A1c",
+        "value": "5.9 %",
+        "date": "2025-07-22",
+        "flag": "high"
+      },
+      {
+        "name": "LDL cholesterol",
+        "value": "88 mg/dL",
+        "date": "2025-07-22",
+        "flag": "normal"
+      },
+      {
+        "name": "Creatinine",
+        "value": "1.0 mg/dL",
+        "date": "2025-07-22",
+        "flag": "normal"
+      },
+      {
+        "name": "ALT",
+        "value": "27 U/L",
+        "date": "2025-07-22",
+        "flag": "normal"
+      },
+      {
+        "name": "Alkaline phosphatase",
+        "value": "79 U/L",
+        "date": "2025-07-22",
+        "flag": "normal"
+      },
+      {
+        "name": "Albumin",
+        "value": "4.2 g/dL",
+        "date": "2025-07-22",
+        "flag": "normal"
+      },
+      {
+        "name": "TSH",
+        "value": "2.0 mIU/L",
+        "date": "2025-07-22",
+        "flag": "normal"
+      },
+      {
+        "name": "PSA",
+        "value": "1.5 ng/mL",
+        "date": "2025-07-22",
+        "flag": "normal"
+      }
+    ],
+    "goldBriefing": {
+      "oneLiner": "61M booked for a quick meloxicam refill for knee OA — but charted vitals show ~18 lb (~8%) unintentional weight loss since Oct 2025 (212 → 194 lb) with decreased appetite, noted only in passing ('pants looser') in the last visit and never quantified or worked up; this warrants targeted red-flag screening before it's treated as a routine refill.",
+      "keyHistory": [
+        "Stated reason for today's visit is a refill of meloxicam 15 mg daily for chronic bilateral knee OA (R>L), plus a question about a cortisone injection — easy to handle as a 5-minute refill.",
+        "Weight trend across charted vitals: 214 lb (Jul 2025) → 212 lb (Oct 2025) → 194 lb (Feb 2026) = ~18 lb / ~8% loss over ~4 months, with no documented intent to lose weight.",
+        "Feb 2026 note: patient reported pants are looser and appetite is down ('food doesn't appeal,' eating less). This was documented offhand during a rushed knee visit and was never quantified, screened, or worked up.",
+        "Risk amplifiers: former smoker ~25 pack-years (quit 2017, LDCT-eligible but never screened); colonoscopy overdue (last 2015, normal) with father dx colorectal cancer at 70; longstanding GERD now with new appetite/food aversion.",
+        "Stable chronic problems: HTN, HLD, prediabetes (A1c 5.9%), GERD, BPH — all on stable regimens.",
+        "Workup is stale: most recent labs are from Jul 2025; no CBC/CMP or other labs since the weight loss began."
+      ],
+      "followUpQuestions": [
+        {
+          "question": "Can we put a number on it — do you know roughly what you weighed a few months ago versus now, and have your clothes or belt notch changed sizes?",
+          "why": "Confirms and quantifies the ~18 lb (~8%) loss objectively. Unintentional loss of >5% of body weight over 6–12 months is a recognized red flag that mandates evaluation; the chart already supports it but it should be confirmed with the patient.",
+          "priority": "high"
+        },
+        {
+          "question": "Were you trying to lose weight — any new diet, exercise, or weight-loss medication (e.g., a GLP-1) — or did this happen on its own?",
+          "why": "Distinguishes intentional from unintentional loss. Intentional loss is reassuring; unintentional loss in a 61-year-old is the finding that drives the rest of the workup.",
+          "priority": "high"
+        },
+        {
+          "question": "Have you had any fevers, drenching night sweats, or unusual fatigue?",
+          "why": "Screens for B-symptoms suggesting malignancy (incl. lymphoma) or chronic infection as a cause of unintentional weight loss.",
+          "priority": "high"
+        },
+        {
+          "question": "Any change in your bowels — blood or black/tarry stools, new constipation or diarrhea, trouble swallowing, feeling full quickly, or abdominal pain?",
+          "why": "Targets GI red flags, which are high-yield here given the appetite loss, GERD history, overdue colonoscopy, and family history of colorectal cancer.",
+          "priority": "high"
+        },
+        {
+          "question": "Any new or worsening cough, shortness of breath, or coughing up blood?",
+          "why": "Former 25 pack-year smoker; weight loss plus smoking history raises concern for lung malignancy and also reinforces the case for overdue low-dose CT lung screening.",
+          "priority": "medium"
+        },
+        {
+          "question": "How have your mood, stress, and eating been overall — any depression, and any dental or chewing problems affecting how much you eat?",
+          "why": "Appetite and weight loss can be psychosocial or mechanical (depression, dentition); these are common, treatable, and cheap to screen before assuming a sinister cause.",
+          "priority": "medium"
+        }
+      ],
+      "flags": [
+        "RED FLAG — Unintentional weight loss ~18 lb (~8% body weight) over ~4 months (212 → 194 lb) with decreased appetite, buried in free text ('pants looser') and never quantified or worked up.",
+        "Visit is framed as a quick refill — high risk the weight loss gets skimmed past unless explicitly surfaced; don't anchor on the knee.",
+        "Overdue cancer screening relevant to the differential: colonoscopy due (last 2015 normal; FHx father colorectal CA at 70) and LDCT never done despite ~25 pack-year smoking history.",
+        "Stale workup: no labs since Jul 2025 — no CBC/CMP since the weight loss began.",
+        "Prediabetes (A1c 5.9%) — uncontrolled/progressing hyperglycemia is an alternative cause of weight loss worth excluding (recheck glucose/A1c)."
+      ],
+      "briefingMarkdown": "## Marcus Feeney — 61M · Prep for refill visit (knee OA / meloxicam)\n\n**Stated reason:** quick refill of meloxicam for knee OA; also asking about a cortisone shot.\n\n> ⚠️ **Don't treat this as a routine refill.** Chart review surfaces an unintentional weight loss that appears only in passing.\n\n| Date | Weight |\n|------|--------|\n| Jul 2025 | 214 lb |\n| Oct 2025 | 212 lb |\n| Feb 2026 | **194 lb** |\n\n→ **~18 lb (~8%) lost in ~4 months.** Feb 2026 note: *\"pants looser,\"* appetite down, food *\"doesn't appeal.\"* Documented offhand during a rushed knee visit — **never quantified or worked up.**\n\n**Why it matters:** Unintentional loss >5% in 6–12 months warrants evaluation. Amplifiers in this chart:\n- Former smoker ~25 pack-yr — LDCT-eligible, never done\n- Colonoscopy overdue (last 2015 normal); **FHx father colon CA @70**\n- Longstanding GERD + new appetite/food aversion\n- Labs ~1 yr old — no CBC/CMP since the loss began\n\n**Do this visit (besides the refill):**\n1. **Quantify** the loss and confirm it's unintentional (prior weight, belt/clothes).\n2. **Screen B-symptoms** (fevers, night sweats, fatigue) **+ GI red flags** (melena/hematochezia, dysphagia, early satiety, bowel change, abdominal pain).\n3. **Order baseline workup:** CBC, CMP, ferritin/iron studies, TSH, repeat A1c, ± FIT/stool studies.\n4. **Close screening gaps:** schedule colonoscopy and offer LDCT.\n5. The meloxicam refill is the easy part — don't let it anchor the visit."
+    }
+  },
+  {
+    "id": "tara-whitfield-anxiety-thyroid",
+    "name": "Tara Whitfield",
+    "age": 34,
+    "sex": "Female",
+    "clinicalTheme": "Behavioral/mental-health vs medical-mimic overlap: an anxiety presentation (palpitations, insomnia, \"on edge\") that could actually be hyperthyroidism, layered with two never-completed standardized screens (anxiety/depression and alcohol use).",
+    "demonstrates": "The assistant must hold two threads at once: (1) close overdue standardized screening — administer GAD-7/PHQ-9 and a brief AUDIT-C alcohol assessment that have never been done; and (2) catch that a borderline-abnormal, never-rechecked thyroid panel (low TSH / high-normal free T4) plus objective signs (resting tachycardia, ~5 lb unintentional weight loss, intermittent tremor) make hyperthyroidism a medical mimic of anxiety that warrants a repeat thyroid panel BEFORE anchoring on a psychiatric label. The non-obvious win is noticing the dropped thyroid follow-up and that PRN propranolol may be masking adrenergic signs.",
+    "problemList": [
+      "Palpitations, unspecified",
+      "Insomnia, chronic",
+      "Anxiety symptoms / situational stress — NOT formally screened (no GAD-7/PHQ-9 ever documented)",
+      "Abnormal thyroid function test — low TSH / borderline-high free T4 (May 2025), follow-up recheck never completed",
+      "Alcohol use — weekend, self-reported escalating — not formally assessed (no AUDIT-C)",
+      "Vitamin D deficiency",
+      "Contraception management"
+    ],
+    "medications": [
+      "Norgestimate–ethinyl estradiol (combined oral contraceptive) — 1 tab PO daily",
+      "Propranolol 10 mg PO PRN palpitations (started Feb 2026)",
+      "Melatonin 3 mg PO at bedtime PRN (started Nov 2025)",
+      "Cholecalciferol (vitamin D3) 2000 IU PO daily",
+      "Multivitamin PO daily"
+    ],
+    "allergies": [
+      "Sulfa drugs (sulfamethoxazole) — hives/rash",
+      "No known food allergies"
+    ],
+    "upcomingVisitReason": "Follow-up for ongoing palpitations, insomnia, and \"feeling on edge\"; patient attributes symptoms to work stress and is asking for help sleeping and possibly \"something for anxiety.\"",
+    "labs": [
+      {
+        "name": "TSH",
+        "value": "0.38 mIU/L (ref 0.45–4.50)",
+        "date": "2025-05-19",
+        "flag": "Low"
+      },
+      {
+        "name": "Free T4",
+        "value": "1.7 ng/dL (ref 0.8–1.8)",
+        "date": "2025-05-19",
+        "flag": "Borderline high"
+      },
+      {
+        "name": "Free T3",
+        "value": "Not ordered",
+        "date": "2025-05-19",
+        "flag": "Not done"
+      },
+      {
+        "name": "TPO antibody",
+        "value": "Not ordered",
+        "date": "2025-05-19",
+        "flag": "Not done"
+      },
+      {
+        "name": "Hemoglobin A1c",
+        "value": "5.3 %",
+        "date": "2025-05-19",
+        "flag": "Normal"
+      },
+      {
+        "name": "Hemoglobin",
+        "value": "13.4 g/dL",
+        "date": "2025-05-19",
+        "flag": "Normal"
+      },
+      {
+        "name": "Basic metabolic panel",
+        "value": "Within normal limits",
+        "date": "2025-05-19",
+        "flag": "Normal"
+      },
+      {
+        "name": "LDL cholesterol",
+        "value": "98 mg/dL",
+        "date": "2025-05-19",
+        "flag": "Normal"
+      },
+      {
+        "name": "Vitamin D, 25-OH",
+        "value": "22 ng/mL (ref 30–100)",
+        "date": "2025-05-19",
+        "flag": "Low"
+      },
+      {
+        "name": "ECG (in-office)",
+        "value": "Sinus tachycardia ~100 bpm, no ectopy, normal intervals",
+        "date": "2026-02-19",
+        "flag": "Abnormal"
+      }
+    ],
+    "priorNotes": [
+      {
+        "date": "2025-05-14",
+        "type": "Annual physical / well-woman visit",
+        "author": "Marisol Ferreira, MD",
+        "text": "34F here for annual, no major complaints. Busy season at work (marketing), feeling 'wired.' c/o occasional heart racing — few sec, self-resolves, ~1-2x/wk, worse w/ coffee (4-5 cups/day). Denies CP, no syncope, no SOB. Sleep 'not great.' No wt change per pt. EtOH social, 'couple drinks on wknds.' Smoker: never.\nROS o/w neg — no heat intol, no tremor noted by pt, bowels reg, menses reg on OCP.\nVS: BP 124/78, HR 92, T 98.4, BMI 23.1, SpO2 99%\nGen: well, mildly anxious affect, NAD. Neck: no thyromegaly appreciated, no nodule, no bruit. CV: RRR but slightly tachy, no m/r/g. Lungs CTA b/l.\nA/P: Healthy 34F w/ palpitations — likely caffeine + work stress. Will check TSH/CBC/CMP/lipids/A1c given palps + mild tachy. Counseled cut caffeine. Pt declines further w/u now. RTC 1 yr or sooner prn. Labs ordered."
+      },
+      {
+        "date": "2025-05-20",
+        "type": "Lab result / phone note",
+        "author": "Marisol Ferreira, MD",
+        "text": "Lab f/u call re: annual labs. TSH 0.38 (L), fT4 1.7 (high-nl). CBC/CMP wnl, A1c 5.3, lipids ok, vit D 22 (low). Borderline LOW TSH w/ high-normal fT4 — ? early/subclinical hyperthyroid vs lab variation. Plan: recheck TSH + fT4 + add TPO ab + fT3 in 6-8 wks; start vit D3. Left VM for pt to call & schedule recheck. **No call back / recheck not scheduled as of this note.**"
+      },
+      {
+        "date": "2025-11-03",
+        "type": "Telehealth visit — insomnia",
+        "author": "Janelle Ode, FNP",
+        "text": "Video visit. Pt requests help sleeping. Trouble falling AND staying asleep x ~2 mo, mind 'races' at night. Recently promoted, longer hours, lots of pressure. Says she's been drinking a bit more on weekends to unwind — 'few glasses of wine Fri/Sat, sometimes more.' Denies feeling depressed but admits irritable + on edge. Heart still races on/off. No anxiety/depression screen completed today (limited telehealth visit). Discussed sleep hygiene, reduce evening screens, limit alcohol & caffeine. Trial melatonin 3mg HS. If persistent, f/u in clinic for full eval +/- formal screening. (Did not see/address prior thyroid result on quick chart review.)"
+      },
+      {
+        "date": "2026-02-19",
+        "type": "Office visit — palpitations / anxiety",
+        "author": "Marisol Ferreira, MD",
+        "text": "In for 'palpitations + anxiety.' Sx ongoing, worse last few wks w/ work deadline. Palps now most days, occasionally wakes her at night. + insomnia despite melatonin. Feels on edge, hands shaky sometimes (thinks it's too much coffee). Denies CP/SOB at rest, no presyncope. Wt: down ~5 lb since last yr — says 'trying to eat better.' EtOH: 'more on weekends, it's been stressful,' did not quantify. Caffeine still 4-5 cups/day.\nVS: BP 128/82, HR 98 reg, afeb, BMI 22.3.\nGen: anxious, fidgety. Neck soft, no obvious goiter. CV: mild tachy, reg, no m/g. Fine tremor outstretched hands.\nECG in office: sinus tach ~100, no ectopy.\nA/P: palpitations + anxiety sx, most likely stress/anxiety given work situation. Start propranolol 10mg PO PRN palps. Reassurance. Limit caffeine/EtOH, stress mgmt. RTC 4-6 wk; consider formal anxiety eval at f/u. (Thyroid not rechecked this visit.)"
+      }
+    ],
+    "goldBriefing": {
+      "oneLiner": "34F with months of palpitations, insomnia, and feeling 'on edge' attributed to work stress — but with a never-rechecked borderline-abnormal thyroid (low TSH 0.38, high-normal free T4 1.7 in May 2025), objective signs of resting tachycardia, ~5 lb unintentional weight loss and intermittent tremor, no standardized mental-health screen ever, and self-reported escalating weekend alcohol that has never been quantified.",
+      "keyHistory": [
+        "34F, several months of palpitations + insomnia + 'on edge,' attributed to work stress / recent promotion; now asking for sleep help and possibly 'something for anxiety.'",
+        "May 2025 thyroid panel: TSH 0.38 (LOW), free T4 1.7 (borderline HIGH). Recheck with free T3/TPO advised in 6-8 wks — patient never called back and the recheck was NEVER done.",
+        "Objective hyperthyroid-leaning signs across visits: HR 92 → 98, in-office sinus tachycardia ~100 on ECG (Feb 2026), ~5 lb unintentional weight loss, fine hand tremor.",
+        "Never had a GAD-7 or PHQ-9 — anxiety has been assumed/labeled but never measured (severity, function, or safety unknown).",
+        "Self-reported escalating weekend alcohol ('few glasses of wine Fri/Sat, sometimes more,' 'more on weekends') — never quantified, no AUDIT-C.",
+        "Started propranolol 10 mg PRN palpitations (Feb 2026) — a beta-blocker that can blunt/mask adrenergic hyperthyroid signs.",
+        "High caffeine load (4-5 cups/day) — reversible contributor to palpitations and insomnia.",
+        "Allergy: sulfa (hives). Meds: combined OCP, propranolol PRN, melatonin PRN, vitamin D3."
+      ],
+      "followUpQuestions": [
+        {
+          "question": "Since last year, have you noticed feeling hot when others are comfortable, sweating more, looser or more frequent stools, or changes in your periods?",
+          "why": "Classic hyperthyroid review-of-systems. With a prior low TSH / high-normal free T4 that was never rechecked, positive answers strongly favor a thyroid cause over primary anxiety.",
+          "priority": "high"
+        },
+        {
+          "question": "Administer GAD-7 and PHQ-9 now.",
+          "why": "Anxiety (and possible depression) have been assumed but never measured. Baseline scores are needed to anchor the diagnosis, gauge severity and suicidality, track treatment response, and avoid mislabeling a medical mimic as anxiety.",
+          "priority": "high"
+        },
+        {
+          "question": "Walk me through a typical week of drinking — which days, and how many drinks each time, including weekends? (AUDIT-C)",
+          "why": "Self-reported escalating weekend use was never quantified. Alcohol independently drives palpitations, insomnia, and anxiety, and an AUDIT-C score changes counseling and management.",
+          "priority": "high"
+        },
+        {
+          "question": "Has your weight dropped without trying, and do you notice hand tremor or your heart pounding at rest?",
+          "why": "Documents the ~5 lb loss, tremor, and resting tachycardia objectively — the triad that tips the differential toward hyperthyroidism rather than anxiety.",
+          "priority": "high"
+        },
+        {
+          "question": "How much caffeine, energy drinks, pre-workout, or OTC stimulant/diet pills do you use in a day?",
+          "why": "Stimulants are a reversible driver of palpitations and insomnia that confound both the anxiety and thyroid picture; 4-5 cups/day is already documented.",
+          "priority": "medium"
+        },
+        {
+          "question": "Any family history of thyroid or autoimmune disease, and how often are you actually taking the propranolol?",
+          "why": "Family history raises pretest probability for autoimmune (Graves) thyroid disease; frequent PRN propranolol can mask hyperthyroid signs on exam, so a 'calm' exam should be interpreted with caution.",
+          "priority": "medium"
+        }
+      ],
+      "flags": [
+        "MEDICAL MIMIC: Borderline-abnormal thyroid (TSH 0.38 low / free T4 1.7 high-normal, May 2025) was NEVER rechecked despite a documented plan to repeat in 6-8 weeks. Order repeat TSH + free T4 + free T3 + TPO antibody BEFORE attributing symptoms to anxiety — hyperthyroidism mimics anxiety.",
+        "Three objective signs support the thyroid thread: persistent resting tachycardia / in-office sinus tach (ECG Feb 2026), ~5 lb unintentional weight loss, and fine hand tremor — not typical of pure situational anxiety.",
+        "SCREENING GAP: No GAD-7 or PHQ-9 ever documented despite repeated 'anxiety' labeling — administer both today (severity + safety baseline).",
+        "SCREENING GAP: Alcohol use self-reported as escalating on weekends but never quantified — complete an AUDIT-C; relevant to palpitations, insomnia, and mood.",
+        "Propranolol 10 mg PRN may be masking adrenergic hyperthyroid signs — a near-normal exam does not rule out hyperthyroidism.",
+        "Dropped follow-up loop: abnormal lab result left as a voicemail with no closed-loop recheck; telehealth clinician did not see/address the prior thyroid result."
+      ],
+      "briefingMarkdown": "## Tara Whitfield — 34F | Follow-up: palpitations, insomnia, “on edge”\n\n**One-liner:** 34F with months of palpitations, insomnia, and feeling on edge — attributed to work stress — but with a **never-rechecked borderline-abnormal thyroid** (TSH 0.38 low, free T4 1.7 high-normal, May 2025) plus objective signs (resting tachy, ~5 lb weight loss, tremor), **no standardized mental-health screen ever**, and **self-reported escalating weekend alcohol** that was never quantified.\n\n### Hold two threads today\n\n**1) Don’t miss the medical mimic (thyroid)**\n- May 2025: **TSH 0.38 (L), free T4 1.7 (high-nl)** → recheck w/ free T3 + TPO advised in 6–8 wks — **never done** (left as a voicemail, no closed loop).\n- Supporting signs across visits: HR 92→98, **in-office sinus tach ~100 (ECG Feb 2026)**, **~5 lb unintentional weight loss**, fine **tremor**.\n- **Action:** repeat TSH + free T4 + free T3 + TPO antibody *before* anchoring on anxiety. Note **propranolol PRN may mask adrenergic signs**.\n\n**2) Close the screening gaps (mental health + alcohol)**\n- Never had **GAD-7 or PHQ-9** → administer both today (severity + safety).\n- Weekend drinking reported as rising, **never quantified** → **AUDIT-C**.\n\n### Top questions\n- Hyperthyroid ROS: heat intolerance, sweating, bowel/menstrual changes?\n- Quantify weekly alcohol (AUDIT-C).\n- GAD-7 + PHQ-9 today.\n- Caffeine/stimulant load (4–5 cups/day documented).\n\n### Meds / allergies\n- Combined OCP daily; **propranolol 10 mg PRN palps**; melatonin 3 mg HS PRN; vitamin D3.\n- Allergy: **sulfa (hives).**\n\n**Bottom line:** Run the anxiety workup and the thyroid recheck **in parallel** — order a repeat thyroid panel and complete GAD-7/PHQ-9 + AUDIT-C this visit so a hyperthyroid mimic isn’t labeled as stress."
+    }
+  }
+]

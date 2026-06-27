@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+/* ----------------------------------------------------------------------------
+   Clinic Prep Assistant — design tokens
+   Aesthetic: deep near-black, crisp off-white, hairline borders, soft indigo
+   glow used sparingly. Inspired by cursor.com/home — premium, minimal.
+---------------------------------------------------------------------------- */
+:root {
+  /* surfaces */
+  --bg: #0a0a0a;
+  --panel: #111113;
+  --panel-raised: #161618;
+  --border: #262629;
+
+  /* type */
+  --text: #ededed;
+  --muted: #8a8a93;
+  --faint: #5a5a63;
+
+  /* single accent — soft indigo/violet */
+  --accent: #7c83ff;
+  --accent-2: #5b62e0;
+  --accent-glow: rgba(124, 131, 255, 0.22);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, "Segoe UI", Roboto, Inter, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+}
+
+/* selection */
+::selection {
+  background: rgba(124, 131, 255, 0.28);
+  color: #fff;
+}
+
+/* tasteful, thin scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Focus ring helper — soft indigo */
+.focus-accent:focus-visible {
+  outline: none;
+  border-color: rgba(124, 131, 255, 0.55);
+  box-shadow: 0 0 0 3px rgba(124, 131, 255, 0.18);
+}
+
+/* ----------------------------------------------------------------------------
+   .glow — a blurred radial gradient halo using the accent.
+   Place absolutely behind a header; sized with utility classes.
+---------------------------------------------------------------------------- */
+.glow {
+  pointer-events: none;
+  background: radial-gradient(
+    closest-side,
+    var(--accent-glow) 0%,
+    rgba(124, 131, 255, 0.08) 45%,
+    transparent 78%
+  );
+  filter: blur(44px);
+  will-change: transform;
+}
+
+/* subtle top hairline sheen used on raised cards */
+.hairline-top {
+  position: relative;
+}
+.hairline-top::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.06) 35%,
+    rgba(255, 255, 255, 0.06) 65%,
+    transparent
+  );
+}
+
+/* gentle entrance for the briefing */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-rise {
+  animation: rise 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ----------------------------------------------------------------------------
+   Print — produce a clean, paper-friendly printout of ONLY the briefing.
+   Components reference the CSS vars below, so re-mapping them flips the
+   briefing to a light theme automatically. Badges are flattened for ink.
+---------------------------------------------------------------------------- */
+@media print {
+  :root {
+    --bg: #ffffff;
+    --panel: #ffffff;
+    --panel-raised: #ffffff;
+    --border: #d4d4d8;
+    --text: #111111;
+    --muted: #3f3f46;
+    --faint: #71717a;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+  }
+
+  /* hide everything, then reveal the briefing only */
+  body * {
+    visibility: hidden;
+  }
+  .print-area,
+  .print-area * {
+    visibility: visible;
+  }
+  .print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 0 !important;
+    animation: none !important;
+  }
+
+  /* never print these */
+  .no-print,
+  .glow {
+    display: none !important;
+  }
+
+  /* flatten badges + cards so they read on paper */
+  .badge {
+    color: #111 !important;
+    background: transparent !important;
+    border-color: #9ca3af !important;
+  }
+  .print-area .card-elev {
+    box-shadow: none !important;
+  }
+
+  @page {
+    margin: 16mm;
+  }
+}
