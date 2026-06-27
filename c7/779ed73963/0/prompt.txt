@@ -1,0 +1,111 @@
+please read over all of the information that I'm attached. I know what truck I want to build. I'm pretty certain I wanna use the agent all of the information you need to better understand what is necessary for halftime is included what you need to focus on is how to help me make this a buildable shareable contract and I want to use Superbase locally which is already installed on my machine. I just need your help putting the ideas together and figuring out what synthetic data I wanna come up with in order to make this be   the idea track i want to build is <"Clinic prep assistant": upload patient notes before an appointment; Claude summarizes key history, flags follow-up questions, and generates a short doctor briefing.> <## **Brief: Ship something real.**
+
+- Build a working product that solves a real-world problem for a specific person, team, or workflow.
+- It could help a doctor save time or get insights, a teacher support students, a founder run their business, or a team automate painful internal work.
+- The goal is not to just make a flashy demo, but to ship something useful, usable, and impactful that someone could realistically use (even if it’s not perfect).
+
+**Recommended tech stack**
+
+- Build with Claude Code
+- Deploy on Vercel
+    - Try eve.dev our new agent framework
+    - You can also leverage these primitives outside the framework Vercel AI SDK, AI Gateway, Workflows, Sandbox
+- Database - Supabase
+- Auth - Auth0
+- Observability - Sentry
+- Email - Resend> <**What will I need to submit?**
+
+- GitHub repo link
+- 1 minute 30 demo video (YouTube unlisted or Loom)
+- Names of team members
+- List of technologies used (e.g. Vercel, Claude Code, Supabase, Auth0, Resend, Sentry)
+- Deploy link (it should be live on the web somewhere)
+- Submission password: `shipnyc`> <## Building With Claude Code + Vercel
+
+## Quick Start
+
+Use Claude Code as your AI engineering teammate during the hackathon. It can help you understand a codebase, scaffold features, debug issues, write tests, review diffs, and ship changes.
+
+Start here:
+
+- Claude Code overview
+- Claude Code quickstart
+- Claude Code best practices
+
+## Recommended Claude Code Workflow
+
+For best results, give Claude Code four things in every prompt:
+
+- **Goal:** What are you trying to build?
+- **Context:** Which files, docs, errors, examples, or APIs matter?
+- **Constraints:** What stack, style, architecture, or hackathon requirements should it follow?
+- **Done when:** What should be true before the task is complete?
+
+## Vercel Plugin
+
+The Vercel Plugin for AI Coding Agents gives supported coding agents Vercel-specific expertise for deployment, performance, AI app architecture, environment variables, and Marketplace integrations.
+
+It includes:
+
+- Vercel ecosystem guidance
+- Vercel-specific skills
+- Specialist agents for deployment, performance, and AI architecture
+- Slash commands for common workflows
+
+Install command:
+
+```bash
+npx plugins add vercel/vercel-plugin
+```
+
+Useful commands:
+
+```
+/vercel-plugin:bootstrap
+/vercel-plugin:deploy
+/vercel-plugin:deploy prod
+/vercel-plugin:env
+/vercel-plugin:status
+/vercel-plugin:marketplace
+```> <## Vercel
+
+### What to build with it
+
+- Deploy your frontend + backend quickly (Next.js + API routes)
+- Supports frameworks like Svelte, Nuxt, Astro, and more
+- Long-running / durable workflows with Vercel Workflows
+- Model routing + key management with Vercel AI Gateway
+
+## **Build AI Features On Vercel**
+
+Vercel has a strong AI app stack beyond hosting. For hackathon projects, consider this as the default toolkit:
+
+- **NEW✨** eve.dev: The framework for building agents. Like Next.js for web apps, but for agents. Markdown for instructions and skills, TypeScript for tools. Durable by default. A batteries-included framework that leverages the primitives below!
+- **AI SDK**: TypeScript toolkit for building AI apps with streaming, tool calls, structured outputs, chatbots, and provider-agnostic model calls.
+- **AI Gateway**: One API endpoint for hundreds of models. Useful for switching providers, setting budgets, monitoring usage, load balancing, and fallbacks.
+- **Vercel Sandbox**: Secure isolated environments for running untrusted or AI-generated code, code playgrounds, live previews, and agent experiments.
+- **Vercel Workflows**: Durable workflows for AI agents and long-running tasks that need to pause, resume, retry, and survive deploys or crashes.
+- **Next.js on Vercel**: Recommended foundation for most web apps, dashboards, and AI product demos.
+
+Install commands:
+
+```bash
+pnpm i ai
+pnpm i @vercel/sandbox
+pnpm i workflow
+```
+
+Good rule of thumb:
+
+- Use **AI SDK** when your app needs model calls, streaming UI, tools, or structured output.
+- Use **AI Gateway** when you want easy model/provider switching, usage visibility, budget control, or fallbacks.
+- Use **Sandbox** when users or agents generate code/files that need to run safely.
+- Use **Workflow** when an AI task spans multiple steps, needs retries, or may take minutes to months.> <npx skills add vercel/eve>
+
+---
+
+remember to keep the supabase usage local to spin up in this repo and have that be our backend for what you publish to vercel for our project, don't worry my laptop will be on and accessible during the entire demo for today
+
+---
+
+it appears you don't really need my help anytime soon. Once you are done create a summary.md file, email me from <claude.allrick@gmail.com> to <a.kar.wright@gmail.com> if you need me to provide any api keys for anthropic or vercel please email me and poll for a responde for 10mins again all using applescript assuming when you do need credentials, create a .env file with placeholders for anthropic and vercel and i'll provide them to you. ultrathink

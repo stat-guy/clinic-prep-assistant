@@ -1,0 +1,75 @@
+{
+  "cli_version": "0.6.1",
+  "checkpoint_id": "c7779ed73963",
+  "session_id": "38664aef-971b-4b69-86dd-2d16e49a4c19",
+  "strategy": "manual-commit",
+  "created_at": "2026-06-27T18:24:00.422325Z",
+  "branch": "main",
+  "checkpoints_count": 0,
+  "files_touched": [
+    ".env.example",
+    ".gitignore",
+    "README.md",
+    "app/api/patients/route.ts",
+    "app/api/prep/route.ts",
+    "app/layout.tsx",
+    "lib/auth0.ts",
+    "lib/db.ts",
+    "lib/prep.ts",
+    "lib/prompt.ts",
+    "lib/schema.ts",
+    "lib/types.ts",
+    "middleware.ts",
+    "next.config.mjs",
+    "package.json",
+    "postcss.config.mjs",
+    "scripts/debug-prep.ts",
+    "scripts/gen-patients.mjs",
+    "scripts/seed.mjs",
+    "scripts/warm.ts",
+    "supabase/migrations/20260627020000_add_briefing_trends.sql",
+    "tests/fixtures.ts",
+    "tests/prep.test.ts",
+    "tests/prompt.test.ts",
+    "tests/schema.test.ts",
+    "tsconfig.json",
+    "vitest.config.ts"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-opus-4-8[1m]",
+  "turn_id": "2e10c9cb695f",
+  "token_usage": {
+    "input_tokens": 34568,
+    "cache_creation_tokens": 415213,
+    "cache_read_tokens": 14419541,
+    "output_tokens": 310417,
+    "api_call_count": 57
+  },
+  "session_metrics": {
+    "turn_count": 2
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-06-27T18:24:00.388136Z",
+    "agent_lines": 1337,
+    "agent_removed": 0,
+    "human_added": 8102,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 9439,
+    "total_lines_changed": 9439,
+    "agent_percentage": 14.164636084330967,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 3,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/settings.local.json": 3
+      }
+    }
+  ]
+}
