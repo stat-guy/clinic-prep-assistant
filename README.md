@@ -20,7 +20,7 @@ The model is told to **never diagnose, never prescribe, never invent** — anyth
 | Layer | Tech |
 |---|---|
 | Agent / model | **Claude** (`claude-sonnet-4-6`) via the **Vercel AI SDK** `generateObject` (Zod-validated structured output) |
-| Auth | **Auth0** (`@auth0/nextjs-auth0` v4) — gated to the authorized clinician |
+| Auth | **Session gate** — single-clinician email+password, HMAC-signed httpOnly cookie, enforced in middleware on every route (UI + data APIs). Login only, no signup. |
 | DB | **Supabase** (local Postgres: clinicians · patients · source_notes · appointments · briefings) |
 | UI | **Next.js 15** App Router + React 19 + Tailwind v4 (shadcn-style components), mobile-first |
 | Hosting | **Vercel** |
@@ -31,7 +31,7 @@ The model is told to **never diagnose, never prescribe, never invent** — anyth
 Supabase runs **locally** and is reached by the deployed Vercel app through a **cloudflared tunnel** — all DB access is server-side (service role), so the browser only ever talks to Vercel.
 
 ```
-Browser ──https──▶ Vercel (Next.js UI + API routes + Auth0 gate)
+Browser ──https──▶ Vercel (Next.js UI + API routes + session gate)
                      │                         │
                 Claude (Anthropic)     cloudflared tunnel ──▶ localhost:55421
                                                               Supabase (Docker)
@@ -54,11 +54,13 @@ npm test
 npm run dev      # http://localhost:3007
 ```
 
-## Auth0 setup (to enable the clinician gate)
+## Auth (the clinician gate)
 
-1. Paste `AUTH0_CLIENT_SECRET` into `.env`.
-2. In the Auth0 application, add **Allowed Callback URLs** = `<APP_URL>/auth/callback` and **Allowed Logout URLs** = `<APP_URL>` for both `http://localhost:3007` and the deployed URL.
-3. Access is restricted to `ALLOWED_EMAILS` (default `a.kar.wright@gmail.com`). While `AUTH0_CLIENT_SECRET` is unset, the app stays open (so a misconfig can't black out a demo).
+Access is gated by a single authorized clinician credential (`APP_EMAIL` + `APP_PASSWORD`),
+enforced in `middleware.ts` over **every** route — including `/api/patients` and `/api/prep` — so
+no UI, patient list, or generation is reachable without a valid HMAC-signed session cookie. There
+is **no signup** — login only. (The Auth0 SDK is also integrated in the repo, but the enforced gate
+is this self-contained one, so no external dashboard configuration is ever required.)
 
 ## Synthetic data only
 

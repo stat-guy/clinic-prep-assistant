@@ -12,7 +12,7 @@ A pre-visit prep tool for a primary-care physician. Pick a patient (or paste raw
 
 - **Claude** (`claude-sonnet-4-6`) via the **Vercel AI SDK** (`generateObject`, Zod-validated structured output)
 - **Supabase** (local Postgres: clinicians · patients · source_notes · appointments · briefings)
-- **Auth0** (`@auth0/nextjs-auth0` v4) — access gated to the authorized clinician
+- **Session gate** — single-clinician email+password (HMAC-signed cookie), enforced over the UI and the data APIs (Auth0 SDK also integrated)
 - **Next.js 15** (App Router) + **React 19** + **Tailwind v4**, shadcn-style components, mobile-first (iPhone safe-area aware)
 - **Vercel** (hosting + deploy) · **cloudflared** (tunnels the local DB to the cloud app)
 - **Vitest** (red/green TDD on the prompt builder, schema, and orchestration — 11 tests)
@@ -22,7 +22,7 @@ A pre-visit prep tool for a primary-care physician. Pick a patient (or paste raw
 Supabase runs **locally** and is reached by the deployed Vercel app over a **cloudflared tunnel**; all DB access is server-side (service role), so the browser only ever talks to Vercel.
 
 ```
-Browser ─https─▶ Vercel (Next.js UI + API + Auth0 gate)
+Browser ─https─▶ Vercel (Next.js UI + API + session gate)
                   │                      │
              Claude (Anthropic)   cloudflared tunnel ─▶ localhost:55421 Supabase (Docker)
 ```
@@ -49,7 +49,7 @@ For demo speed (and to stay within serverless time limits), briefings are **gene
 
 ## Auth (gate to the clinician)
 
-- Restricted to `ALLOWED_EMAILS` (default `a.kar.wright@gmail.com`). To enable: paste `AUTH0_CLIENT_SECRET` into `.env` and add `<url>/auth/callback` + `<url>` to the Auth0 app's Allowed Callback/Logout URLs. While unconfigured, the app stays open so a misconfig can't black out the demo.
+- Gated to a single clinician credential (`APP_EMAIL` / `APP_PASSWORD`), enforced in middleware over the UI **and** `/api/patients` + `/api/prep` — no patient data without signing in. Login only (no signup), no external dashboard config.
 
 ## Caveats
 

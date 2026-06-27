@@ -1,5 +1,7 @@
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
+import { cookies } from "next/headers";
+import { SESSION_COOKIE, verifySession } from "@/lib/auth";
 
 export const metadata: Metadata = {
   title: "Clinic Prep Assistant",
@@ -10,78 +12,23 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  viewportFit: "cover", // enables env(safe-area-inset-*) on iPhone notch / Dynamic Island
+  viewportFit: "cover",
   themeColor: "#0a0a0a",
 };
 
-// Server-side session read, fully guarded: a missing/placeholder Auth0 config
-// returns null (header shows "Log in") and never throws — the app stays usable.
-async function getUser() {
+async function getEmail(): Promise<string | null> {
   try {
-    const secret = process.env.AUTH0_CLIENT_SECRET;
-    if (!secret || secret.startsWith("__PASTE")) return null;
-    const { auth0 } = await import("@/lib/auth0");
-    const session = await auth0.getSession();
-    return session?.user ?? null;
+    const secret = process.env.SESSION_SECRET || "";
+    if (!secret) return null;
+    const c = await cookies();
+    return await verifySession(c.get(SESSION_COOKIE)?.value, secret);
   } catch {
     return null;
   }
 }
 
-function GateScreen({ signedIn }: { signedIn: boolean }) {
-  return (
-    <main style={{ minHeight: "72vh", display: "grid", placeItems: "center", padding: "2rem" }}>
-      <div
-        style={{
-          maxWidth: 440,
-          textAlign: "center",
-          border: "1px solid var(--border,#262629)",
-          background: "var(--panel,#111113)",
-          borderRadius: 16,
-          padding: "2.25rem",
-        }}
-      >
-        <div style={{ fontSize: 28, marginBottom: 8 }}>🔒</div>
-        <h1 style={{ fontSize: "1.15rem", margin: "0 0 0.5rem", color: "var(--text,#ededed)" }}>
-          Authorized clinicians only
-        </h1>
-        <p style={{ color: "var(--muted,#8a8a93)", fontSize: "0.9rem", margin: "0 0 1.25rem", lineHeight: 1.5 }}>
-          {signedIn
-            ? "This account isn’t authorized for this clinic. Please sign in with the clinician account."
-            : "Patient prep is restricted. Please sign in to continue."}
-        </p>
-        <a
-          href={signedIn ? "/auth/logout" : "/auth/login"}
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            justifyContent: "center",
-            minHeight: 44,
-            padding: "0 1.4rem",
-            borderRadius: 10,
-            color: "#fff",
-            background: "linear-gradient(135deg,#7c83ff,#5b62e0)",
-            textDecoration: "none",
-            fontWeight: 600,
-          }}
-        >
-          {signedIn ? "Switch account" : "Log in"}
-        </a>
-      </div>
-    </main>
-  );
-}
-
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const user = await getUser();
-  const authConfigured =
-    !!process.env.AUTH0_CLIENT_SECRET && !process.env.AUTH0_CLIENT_SECRET.startsWith("__PASTE");
-  const allow = (process.env.ALLOWED_EMAILS || "a.kar.wright@gmail.com")
-    .toLowerCase()
-    .split(",")
-    .map((s) => s.trim());
-  // Open while Auth0 is unconfigured (build/demo safety); once configured, gate to the allowlist.
-  const allowed = !authConfigured || (!!user?.email && allow.includes(user.email.toLowerCase()));
+  const email = await getEmail();
 
   const barStyle: React.CSSProperties = {
     display: "flex",
@@ -135,7 +82,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             />
             Clinic Prep
           </span>
-          {user ? (
+          {email ? (
             <span style={{ display: "inline-flex", alignItems: "center", gap: "0.6rem" }}>
               <span
                 style={{
@@ -146,32 +93,15 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                   whiteSpace: "nowrap",
                 }}
               >
-                {user.email ?? user.name ?? "Signed in"}
+                {email}
               </span>
-              <a href="/auth/logout" style={linkStyle}>
+              <a href="/api/logout" style={linkStyle}>
                 Log out
               </a>
             </span>
-          ) : (
-            <span style={{ display: "inline-flex", alignItems: "center", gap: "0.45rem" }}>
-              <a href="/auth/login" style={linkStyle}>
-                Log in
-              </a>
-              <a
-                href="/auth/login?screen_hint=signup"
-                style={{
-                  ...linkStyle,
-                  color: "#fff",
-                  border: "1px solid transparent",
-                  background: "linear-gradient(135deg,#7c83ff,#5b62e0)",
-                }}
-              >
-                Sign up
-              </a>
-            </span>
-          )}
+          ) : null}
         </header>
-        {allowed ? children : <GateScreen signedIn={!!user} />}
+        {children}
       </body>
     </html>
   );

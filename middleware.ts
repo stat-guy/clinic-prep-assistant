@@ -1,27 +1,33 @@
-import type { NextRequest } from "next/server";
-import { NextResponse } from "next/server";
+import { NextResponse, type NextRequest } from "next/server";
+import { SESSION_COOKIE, verifySession } from "./lib/auth";
 
-// Mounts the Auth0 routes (/auth/login, /auth/callback, /auth/logout, /auth/profile)
-// and keeps the session fresh. Guarded so a missing/incomplete Auth0 config can
-// NEVER black out the app — it simply forwards the request.
-export async function middleware(request: NextRequest) {
-  if (
-    !process.env.AUTH0_DOMAIN ||
-    !process.env.AUTH0_CLIENT_SECRET ||
-    process.env.AUTH0_CLIENT_SECRET.startsWith("__PASTE")
-  ) {
+// Public paths reachable WITHOUT a session. Everything else — including the data
+// APIs (/api/patients, /api/prep) — requires a valid signed session.
+const PUBLIC = ["/login", "/api/login", "/api/logout"];
+
+export async function middleware(req: NextRequest) {
+  const { pathname } = req.nextUrl;
+  if (PUBLIC.some((p) => pathname === p || pathname.startsWith(p + "/"))) {
     return NextResponse.next();
   }
-  try {
-    const { auth0 } = await import("./lib/auth0");
-    return await auth0.middleware(request);
-  } catch {
-    return NextResponse.next();
+
+  const secret = process.env.SESSION_SECRET || "";
+  const allowed = (process.env.APP_EMAIL || "").toLowerCase();
+  const email = await verifySession(req.cookies.get(SESSION_COOKIE)?.value, secret);
+  const ok = !!email && (!allowed || email.toLowerCase() === allowed);
+
+  if (ok) return NextResponse.next();
+
+  // No valid session: APIs get a clean 401; pages bounce to the login screen.
+  if (pathname.startsWith("/api/")) {
+    return NextResponse.json({ error: "Sign in required" }, { status: 401 });
   }
+  const url = req.nextUrl.clone();
+  url.pathname = "/login";
+  url.search = "";
+  return NextResponse.redirect(url);
 }
 
 export const config = {
-  // Match everything except Next internals and our own API routes (which don't
-  // need a session). This keeps /auth/* handled by Auth0 while /api/* stays open.
-  matcher: ["/((?!_next/static|_next/image|api|favicon.ico|sitemap.xml|robots.txt).*)"],
+  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
 };

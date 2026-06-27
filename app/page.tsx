@@ -29,6 +29,15 @@ export default function Page() {
   const [status, setStatus] = React.useState<Status>("idle");
   const [result, setResult] = React.useState<PrepResponse | null>(null);
   const [error, setError] = React.useState<string | null>(null);
+  const outputRef = React.useRef<HTMLDivElement>(null);
+
+  // After Generate, jump to the top of the briefing (especially on mobile, where
+  // the output stacks below the controls — the clinician shouldn't have to hunt).
+  React.useEffect(() => {
+    if (status === "loading" || status === "done") {
+      outputRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [status]);
 
   // Load synthetic patients on mount.
   React.useEffect(() => {
@@ -253,7 +262,7 @@ export default function Page() {
         </aside>
 
         {/* Right — output */}
-        <section className="min-w-0">
+        <section ref={outputRef} className="min-w-0 scroll-mt-16">
           {status === "loading" ? (
             <Card elevated className="p-5 sm:p-7">
               <BriefingSkeleton />
